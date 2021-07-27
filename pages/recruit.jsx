@@ -6,6 +6,7 @@ import { Recruitsec4 } from "../compornents/oragenism/recruit/Recruitsec4";
 import { Recruitsec5 } from "../compornents/oragenism/recruit/Recruitsec5";
 import { Recruitsec6 } from "../compornents/oragenism/recruit/Recruitsec6";
 import { Recruitsec7 } from "../compornents/oragenism/recruit/Recruitsec7";
+import Seo from '../compornents/Seo'
 
 import { Link as Scroll } from 'react-scroll';
 import HeaderLeyout  from "../compornents/templatets/HeaderLeyout";
@@ -28,6 +29,7 @@ export default function Recruit() {
   return (
       <>
       <HeaderLeyout>
+      <Seo title="採用について | 株式会社YK企画" description="採用について | YK企画は様々な働き方を提案します。" />
       <Swiper direction={'vertical'} slidesPerView={1} spaceBetween={30} mousewheel={true} pagination={{
   "clickable": true
 }} className="mySwiper">

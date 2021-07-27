@@ -1,16 +1,41 @@
 import styled from "styled-components";
+import { ReactElement, useEffect } from 'react';
 import Sec1main from "../../../image/top/sec1main.png";
 import Crean from "../../../image/common/crean.png";
 import Mou from "../../../image/common/mou.png";
 import { Txtbtn }  from "../../atoms/btn/Txtbtn";
+import { gsap } from 'gsap/dist/gsap';
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export const TopAbout = ()=> {
+  useEffect(() => {
+    if (process.browser) {
+      gsap.registerPlugin(ScrollTrigger)
+      setAnimation()
+    }
+  }, [])
+
+  const setAnimation = () => {
+      gsap.fromTo(
+        '#wrapper-a h2',
+        { opacity: 0 }, //fromの設定
+        {  //toの設定
+          opacity: 1,
+          duration: 1,
+          scrollTrigger: {
+            trigger: '#wrapper-a',
+            start: 'top center', //要素のトップが、画面の中央まできたら開始
+            end: 'bottom center', //要素のボトムが、画面の中央まできたら終了
+          },
+        }
+      )
+    }
   return (
       <Sinner>
         <Sscimg>
         <img src={Sec1main.src} alt="about YK" />
         </Sscimg>
-        <Ssctxt>
+        <Ssctxt id="wrapper-a">
         <h2>ABOUT YK</h2>
         <h3>関わる全ての人々に便利と快適を。</h3>
         <p>その建物を利用する人や近くを通る人まで、全ての人々が便利、安心も含めた快適さを体感できるサービスを提供し続ける。</p>

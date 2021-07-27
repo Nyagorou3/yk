@@ -40,6 +40,8 @@ export const Footer = () => {
   );
 };
 
+
+
 const Sfooter = styled.footer`
   font-family: futura-pt, sans-serif;
   background: #dfdede;

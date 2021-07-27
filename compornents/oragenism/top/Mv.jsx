@@ -1,13 +1,20 @@
+import { ReactElement, useEffect } from 'react';
 import styled from "styled-components";
 import Mainimg from "../../../image/top/mv_img.png";
 import Mainl from "../../../image/top/mvl.png";
 import Mainr from "../../../image/top/mvr.png";
 import { Normalbtn } from "../../atoms/btn/Normalbtn";
+import { gsap } from 'gsap/dist/gsap';
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+
 
 export const Mv = ()=> {
+
+
   return (
       <Smvwp>
-        <SmaivTxt>
+        <SmaivTxt id="#wrapper-a">
         <h2>
         CONVENIENCE
         <br />
