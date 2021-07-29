@@ -5,16 +5,16 @@ import { ATxtbtn } from "../../atoms/btn/ATxtbtn";
 export const TopContact = ()=> {
   return (
       <Sinner>
-        <Sscimg>
+        <Sscimg  data-scroll data-scroll-speed="1">
         <img src={Con1.src} alt="CONTACT" />
         </Sscimg>
         <Ssctxt>
         <h2>CONTACT</h2>
         <p>
-          お問い合わせはもちろん、必ずしも依頼ではないかもしれないが
+          仕事のご依頼はもちろん、必ずしも依頼につながらないかもしれないが
           伝えたいことを「伝わる」かたちにするためのブレストからスタートしたい、
-          というご依頼も大歓迎です。<br />
-          既存のお取引先の方、その他当社へのご意見・ご要望などもこちらからどうぞ。<br />
+          というお問合せも大歓迎です。<br />
+          既存のお取引先の方、その他弊社へのご意見・ご要望などもこちらからどうぞ。<br />
           2日以内に返信（土日祝日除く）
         </p>
         <ATxtbtn btntxt="MORE" url="mailto:reception@yk-kikaku.jp" />

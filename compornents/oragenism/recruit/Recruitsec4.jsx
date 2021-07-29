@@ -34,7 +34,7 @@ export const Recruitsec4 = ()=> {
         <li>
           <img src={RSec4_3.src} alt="NECESSARY" />
           <h4>特別休暇制度</h4>
-          <p>春休み(3/21~3/25)　誕生日or記念日休暇
+          <p>春休み(3/21~3/25)、誕生日or記念日休暇
              こどもの看護休暇、介護休暇など
           </p>
         </li>

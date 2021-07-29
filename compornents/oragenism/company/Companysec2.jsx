@@ -23,13 +23,14 @@ export const Companysec2 = ()=> {
             特定建築物調査員<br />
             建築設備検査員<br />
             防火設備検査員<br />
+            サーモグラファー<br />
             建築物環境衛生管理技術者<br />
             福祉住環境コーディネーター
             </dd>
           </div>
           <div>
-            <dt>電気<br />
-              消防<br />
+            <dt>電気,
+              消防,
               通信設備</dt>
             <dd>
               第二種電気工事士<br />
@@ -48,15 +49,15 @@ export const Companysec2 = ()=> {
           </div>
           <div>
             <dt>
-            その他<br />各種技能講習</dt>
+            その他,各種技能講習</dt>
             <dd>
             高所作業車<br />
-            移動式クレーン等
+            移動式クレーン,etc
             </dd>
           </div>
           </dl>
         </Ssctxt>
-        <Sscimg>
+        <Sscimg  data-scroll data-scroll-speed="1">
         <img src={CSec2.src} alt="QUALIFICATION" />
         </Sscimg>
       </Sinner>
@@ -188,6 +189,7 @@ const Ssctxt = styled.div`
       }
       @media screen and (max-width: 599px) {
         width: 100%;
+        margin-bottom: 5px;
       }
     }
     dd {
@@ -195,6 +197,7 @@ const Ssctxt = styled.div`
       font-size: 15px;
       @media screen and (max-width: 599px) {
         width: 100%;
+        font-size: 13px;
       }
     }
   }

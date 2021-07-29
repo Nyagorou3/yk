@@ -6,7 +6,7 @@ import { Txtbtn } from "../../atoms/btn/Txtbtn";
 export const Companysec1 = ()=> {
   return (
       <Sinner>
-        <Sscimg>
+        <Sscimg  data-scroll data-scroll-speed="1">
         <img src={ASec1.src} alt="about YK" />
         </Sscimg>
         <Ssctxt>
@@ -66,6 +66,7 @@ const Sscimg = styled.div`
     right: 45%;
     top: -253px;
     background: url(${Crean.src}) no-repeat;
+    animation: updw2 4s 0s infinite;
     background-size: contain;
     @media screen and (max-width: 768px) {
       background-size: contain;
@@ -85,6 +86,9 @@ const Sttl = styled.div`
 display: flex;
 flex-direction: row-reverse;
 justify-content: center;
+@media screen and (max-width: 599px) {
+  width: 35%;
+}
 `
 
 const Ssctxt = styled.div`
@@ -98,7 +102,7 @@ const Ssctxt = styled.div`
     width: 90%;
   }
   @media screen and (max-width: 599px) {
-    width: 97%;
+    width: 95%;
     margin-top: 40px;
   }
   h2{

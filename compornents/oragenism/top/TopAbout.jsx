@@ -17,25 +17,30 @@ export const TopAbout = ()=> {
 
   const setAnimation = () => {
       gsap.fromTo(
-        '#wrapper-a h2',
+        '.fade',
         { opacity: 0 }, //fromの設定
         {  //toの設定
           opacity: 1,
           duration: 1,
           scrollTrigger: {
-            trigger: '#wrapper-a',
+            trigger: '.fade-w',
             start: 'top center', //要素のトップが、画面の中央まできたら開始
             end: 'bottom center', //要素のボトムが、画面の中央まできたら終了
           },
+          stagger: {
+            from: "start",
+            amount: 0.8,
+          }
         }
       )
     }
+
   return (
-      <Sinner>
-        <Sscimg>
+      <Sinner data-scroll>
+        <Sscimg data-scroll data-scroll-speed="1">
         <img src={Sec1main.src} alt="about YK" />
         </Sscimg>
-        <Ssctxt id="wrapper-a">
+        <Ssctxt data-scroll data-scroll-speed="-1">
         <h2>ABOUT YK</h2>
         <h3>関わる全ての人々に便利と快適を。</h3>
         <p>その建物を利用する人や近くを通る人まで、全ての人々が便利、安心も含めた快適さを体感できるサービスを提供し続ける。</p>
@@ -144,6 +149,7 @@ const Ssctxt = styled.div`
     right: -145px;
     top: -457px;
     background: url(${Crean.src}) no-repeat;
+    animation: updw2 4s 0s infinite;
     @media screen and (max-width: 768px) {
       background-size: contain;
       height: 205px;

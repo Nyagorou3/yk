@@ -20,6 +20,9 @@ const Stbtnwp = styled.a`
   font-weight: 600;
   font-size: 20px;
   font-family: futura-pt, sans-serif;
+  &:hover {
+    opacity: 1;
+  }
   @media screen and (max-width: 599px) {
     font-size: 18px;
     letter-spacing: .1em;
@@ -32,11 +35,13 @@ const StBtn = styled.div`
       border-radius: 50%;
       border: 2px solid #413319;
       margin-left: 20px;
+      transition: .5s;
       @media screen and (max-width: 599px) {
         width: 70px;
         height: 70px;
       }
     &::before {
+      transition: .5s;
       content: '';
       position: absolute;
       top: 50%;
@@ -50,6 +55,7 @@ const StBtn = styled.div`
       }
     }
     &::after {
+      transition: .5s;
       content: '';
       position: absolute;
       top: 50%;
@@ -64,5 +70,15 @@ const StBtn = styled.div`
       @media screen and (max-width: 599px) {
         right: 23px;
       }
+    }
+    &:hover {
+       background: #000000;
+       &::before {
+          background: #fff;
+         }
+      &::after {
+        border-left: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        }
     }
 `

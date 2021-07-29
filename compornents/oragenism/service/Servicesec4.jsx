@@ -4,58 +4,89 @@ import ASec1 from "../../../image/about/sec1.png";
 import ASecs1 from "../../../image/about/sec1_sub.png";
 import { Txtbtn } from "../../atoms/btn/Txtbtn";
 
-export const Aboutsec1 = ()=> {
+export const Servicesec4 = ()=> {
   return (
       <Swp>
-      <Sinner>
-        <Sscimg data-scroll data-scroll-speed="-2">
-        <img src={ASec1.src} alt="about YK" />
-        </Sscimg>
-        <Ssctxt>
-        <Sttl>
-        <h2>ABOUT YK</h2>
-        <h3>技術を磨き
-        <br />期待を超えていく</h3>
-        </Sttl>
-        <p>YK企画は、設備の点検からデザインまで職種などの枠にとらわれず多岐に渡って柔軟に事業を展開しています。<br />
-        YKは各事業毎に資格者がいるなど、常にお客様の期待を超えていくをコンセプトに業務を行っています。
-        </p>
-        </Ssctxt>
-      </Sinner>
+
       <SPro>
-        <h3>PROCESS</h3>
+        <h3>FLOW (example)</h3>
         <Sscroll>
         <SproWp>
         <SProBox>
-        <h4>WHY</h4>
+        <h4>(WEBor現地)</h4>
         <p>
-          なぜ必要なのか？<br />
-          課題を認識して<br />
-          共有する
+          一次打ち合わせ
         </p>
         </SProBox>
         <Pointbtn />
         <SProBox>
-        <h4>ANALYSIS</h4>
         <p>
-          課題について<br />
-          多角的に分析する
+          見積書提出
         </p>
         </SProBox>
         <Pointbtn />
         <SProBox>
-        <h4>HOW</h4>
+        <h4>(現地)</h4>
         <p>
-          分析結果を元に<br />
-          どのように解決するか<br />
-          議論する
+          二次打ち合わせ
         </p>
         </SProBox>
         <Pointbtn />
         <SProBox>
-        <h4>ACTION</h4>
         <p>
-          行動する
+          制作案提出
+        </p>
+        </SProBox>
+        <Pointbtn />
+        <SProBox>
+        <h4>(WEBor現地)</h4>
+        <p>
+          三次打ち合わせ
+        </p>
+        </SProBox>
+        <Pointbtn />
+        <SProBox>
+        <p>
+          制作案決定
+        </p>
+        </SProBox>
+        <Pointbtn />
+        <SProBox>
+        <p>
+          制作開始
+        </p>
+        </SProBox>
+        <Pointbtn />
+        <SProBox>
+        <p>
+          大枠完成
+        </p>
+        </SProBox>
+        <Pointbtn />
+        <SProBox>
+        <h4>(WEBor現地)</h4>
+        <p>
+          四次打ち合わせ
+        </p>
+        </SProBox>
+        <Pointbtn />
+        <SProBox>
+        <h4>(WEBor現地)</h4>
+        <p>
+          完成
+        </p>
+        </SProBox>
+        <Pointbtn />
+        <SProBox>
+        <h4>(WEBor現地)</h4>
+        <p>
+          五次打ち合わせ及び検収
+        </p>
+        </SProBox>
+        <Pointbtn />
+        <SProBox>
+        <p>
+          納品及び公開、無償保守(半年間)
         </p>
         </SProBox>
         </SproWp>
@@ -79,26 +110,6 @@ const Swp = styled.section`
     @media screen and (max-width: 599px) {
       top: 8%;
       height: 100%;
-    }
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    width: 150px;
-    height: 185px;
-    left: 5%;
-    bottom: -22%;
-    background: url(${ASecs1.src}) no-repeat;
-    background-size: contain;
-    @media screen and (max-width: 1279px) {
-      width: 110px;
-      bottom: -25%;
-    }
-    @media screen and (max-width: 599px) {
-      width: 80px;
-      bottom: -30%;
-      left: -2%;
-      z-index: 1;
     }
   }
 
@@ -145,7 +156,6 @@ const Sscimg = styled.div`
     right: 45%;
     top: -253px;
     background: url(${Crean.src}) no-repeat;
-    animation: updw2 4s 0s infinite;
     background-size: contain;
     @media screen and (max-width: 768px) {
       background-size: contain;
@@ -224,8 +234,8 @@ const Ssctxt = styled.div`
 `
 
 const SPro = styled.div`
-  width: 70%;
-  margin: 100px auto;
+  width: 80%;
+  margin: 50px 0 100px auto;
   color: #000;
   @media screen and (max-width: 1279px) {
     margin: 30px auto 60px;
@@ -263,14 +273,27 @@ const SPro = styled.div`
   }
 `
 const Sscroll = styled.div`
-  @media screen and (max-width: 599px) {
-    overflow-x: scroll;
+  overflow-x: scroll;
+  padding-bottom: 40px;
+  &::-webkit-scrollbar {
+    height: 5px;
+    width: 0;
+  }
+  &::-webkit-scrollbar-thumb {
+  background: #000;
+  }
+  &::-webkit-scrollbar-track {
+  background: rgba(100,100,100, .2);
   }
 `
 
 const SproWp = styled.div`
   display: flex;
   justify-content: space-between;
+  width: 3500px;
+  @media screen and (max-width: 768px) {
+    width: 2500px;
+  }
   div {
     &:last-of-type {
       background: #000;
@@ -279,9 +302,7 @@ const SproWp = styled.div`
       }
     }
   }
-  @media screen and (max-width: 599px) {
-    width: 740px;
-  }
+
 `
 const SProBox = styled.div`
   position: relative;

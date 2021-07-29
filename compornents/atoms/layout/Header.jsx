@@ -13,13 +13,13 @@ const menuFunction = () => {
   console.log(openMenu);
 }
   return (
-    <Sheader>
+    <Sheader className="op2">
     <Sul>
-      <Sli><Link href="/" passHref><Slink>HOME</Slink></Link></Sli>
+      <Sli><Link href="/" passHref><Slink>TOP</Slink></Link></Sli>
       <Sli><Link href="/about" passHref><Slink>ABOUT</Slink></Link></Sli>
       <Sli><Link href="/service" passHref><Slink>SERVICE</Slink></Link></Sli>
       <Sli><Link href="/company" passHref><Slink>COMPANY</Slink></Link></Sli>
-      <Sli><Link href="/topics" passHref><Slink>BLOG</Slink></Link></Sli>
+      <Sli><Link href="/blog" passHref><Slink>TODAY'S YK</Slink></Link></Sli>
       <Sli><Link href="/links" passHref><Slink>LINKS</Slink></Link></Sli>
       <Sli><a href="/links"><FontAwesomeIcon icon={faInstagram}/></a></Sli>
       <Sli><a href="/links"><FontAwesomeIcon icon={faEnvelope}/></a></Sli>
@@ -35,14 +35,14 @@ const menuFunction = () => {
       </SmenuButton>
       <Shcopy>
         <Shlogo>YK CO,.LTD</Shlogo>
-        <span>© Copyright yk kikaku.inc all right reserved.</span>
+        <span>© yk kikaku CO,.LTD all right reserved.</span>
       </Shcopy>
       <Snul className={openMenu ? 'active' : '' }>
-        <Snli><Link href="/" passHref><Slink><span>ホーム</span>HOME</Slink></Link></Snli>
+        <Snli><Link href="/" passHref><Slink><span>ホーム</span>TOP</Slink></Link></Snli>
         <Snli><Link href="/about" passHref><Slink><span>YKについて</span>ABOUT</Slink></Link></Snli>
         <Snli><Link href="/service" passHref><Slink><span>サービス</span>SERVICE</Slink></Link></Snli>
         <Snli><Link href="/company" passHref><Slink><span>会社概要</span>COMPANY</Slink></Link></Snli>
-        <Snli><Link href="/blog" passHref><Slink><span>新着情報</span>BLOG</Slink></Link></Snli>
+        <Snli><Link href="/blog" passHref><Slink><span>今日のYK達</span>TODAY'S YK</Slink></Link></Snli>
         <Snli><Link href="/links" passHref><Slink><span>リンク</span>LINKS</Slink></Link></Snli>
         <Snli><a href="/links"><FontAwesomeIcon icon={faInstagram}/></a></Snli>
         <Snli><a href="/links"><FontAwesomeIcon icon={faEnvelope}/></a></Snli>
@@ -64,6 +64,7 @@ const Sheader = styled.header`
   justify-content: flex-end;
   font-style: normal;
   z-index: 100;
+  opacity: 0;
 `;
 
 const SmenuButton = styled.div`
@@ -114,6 +115,19 @@ z-index: 100;
       }
     }
 }
+&:hover {
+  span {
+  &:nth-of-type(1) {
+    width: 45%;
+  }
+  &:nth-of-type(2) {
+    width: 40%;
+  }
+  &:nth-of-type(3) {
+    width: 29%;
+  }
+  }
+}
 &.active {
   background: #9a743a;
   span {
@@ -121,6 +135,9 @@ z-index: 100;
     top: 47px;
     transform: rotate(45deg);
     width: 45%;
+    @media screen and (max-width: 599px) {
+      top: 37px;
+    }
   }
   &:nth-of-type(2) {
     left: -100%;
@@ -130,9 +147,20 @@ z-index: 100;
     top: 48px;
     transform: rotate(-45deg);
     @media screen and (max-width: 599px) {
-      top: 51px;
+      top: 38px;
     }
   }
+  }
+  &:hover {
+    span {
+    transform: rotate(0);
+    &:nth-of-type(1) {
+      width: 45%;
+    }
+    &:nth-of-type(3) {
+      width: 45%;
+    }
+    }
   }
 }
 }
@@ -150,7 +178,7 @@ const Sul = styled.ul`
   justify-content: flex-end;
   padding: 20px 125px 20px 20px;
   @media screen and (max-width: 768px) {
-    width: 595px;
+    width: 630px;
     padding: 20px 93px 20px 20px;
   }
   @media screen and (max-width: 599px) {
@@ -161,7 +189,22 @@ const Sli = styled.li`
   margin-right: 2%;
   letter-spacing: .1em;
   a {
+  position:relative;
   color: #000;
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: .5s;
+  }
+  &:hover {
+    &::before {
+      width: 100%;
+    }
+  }
   svg {
     width: 20px;
     margin-top: 5px;
@@ -178,7 +221,7 @@ right: -135px;
 align-items: center;
 @media screen and (max-width: 599px) {
   top: 250px;
-  right: -150px;
+  right: -130px;
 }
 span {
   font-size: 11px;
@@ -188,7 +231,7 @@ span {
 }
 `
 const Shlogo = styled.p`
-font-size: 18px;
+font-size: 20px;
 color: #9a743a;
 margin: 0;
 letter-spacing: .1em;
@@ -220,6 +263,7 @@ const Snul = styled.ul`
   }
   li {
     opacity: 0;
+    border-bottom: 1px solid #424242;
   }
   &.active {
     display: block;
@@ -228,23 +272,35 @@ const Snul = styled.ul`
     li {
       transition: .8s 1s;
       opacity: 1;
+      a {
+        @media screen and (max-width: 599px) {
+          font-size: 20px;
+        }
+      }
     }
   }
 `
 const Snli = styled.li`
-  margin-right: 2%;
   letter-spacing: .1em;
-  margin-bottom: 25px;
+  margin: 25px 5%;
   a {
     color: #fff;
-    font-size: 26px;
-    text-align: center;
+    font-size: 36px;
+    text-align: left;
     display: block;
+    @media screen and (max-width: 599px) {
+      font-size: 26px;
+    }
     svg {
-      width: 25px;
+      width: 20px;
+      padding-left: 9px;
+      @media screen and (max-width: 599px) {
+        width: 20px;
+        padding-left: 13px;
+      }
     }
   span {
-    font-size:13px;
+    font-size:10px;
     display: block;
   }
   }

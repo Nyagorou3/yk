@@ -7,7 +7,7 @@ import { Txtbtn } from "../../atoms/btn/Txtbtn";
 export const Servicesec1 = ()=> {
   return (
     <Sinner>
-      <Sscimg>
+      <Sscimg  data-scroll data-scroll-speed="-2">
       <img src={Sec1main.src} alt="service" />
       </Sscimg>
       <Ssctxt>
@@ -84,9 +84,14 @@ const Ssctxt = styled.div`
     font-size: 60px;
     margin-bottom: 40px;
     font-weight: 600;
+    line-height: 1.2;
     span {
       display: block;
       font-size: 26px;
+      margin-bottom: 5px;
+      @media screen and (max-width: 599px) {
+        font-size: 20px;
+      }
     }
     @media screen and (max-width: 1279px) {
       font-size: 40px;
@@ -122,6 +127,7 @@ const Ssctxt = styled.div`
     right: -145px;
     top: -457px;
     background: url(${Crean.src}) no-repeat;
+    animation: updw2 4s 0s infinite;
     @media screen and (max-width: 768px) {
       background-size: contain;
       height: 205px;
@@ -129,7 +135,8 @@ const Ssctxt = styled.div`
       top: -235px;
     }
     @media screen and (max-width: 599px) {
-      top: -555px;
+      top: -495px;
+      right: 35px;
       width: 54%;
     }
   }

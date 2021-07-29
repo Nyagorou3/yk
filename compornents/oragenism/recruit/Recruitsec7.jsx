@@ -18,7 +18,7 @@ export const Recruitsec7 = ()=> {
         </div>
         <div>
           <dt>勤務時間</dt>
-          <dd>8:30~17:30(業務状況により、残業または一時的な定時変更の可能性あり)</dd>
+          <dd>8:30~17:30<br />(業務状況により、残業または一時的な定時変更の可能性あり)</dd>
         </div>
         <div>
           <dt>月給</dt>
@@ -30,7 +30,7 @@ export const Recruitsec7 = ()=> {
         </div>
         <div>
           <dt>昇給</dt>
-          <dd>昇給審査年1回(3月　4月より反映)</dd>
+          <dd>昇給審査年1回(3月審査 4月より反映)</dd>
         </div>
         <div>
           <dt>休日</dt>
@@ -47,7 +47,7 @@ export const Recruitsec7 = ()=> {
         </div>
         <div>
           <dt>定年</dt>
-          <dd>65歳(別途相談可能　希望に応じます。)</dd>
+          <dd>定めなし　希望に応じます。</dd>
         </div>
         <div>
           <dt>退職金制度</dt>
@@ -59,11 +59,11 @@ export const Recruitsec7 = ()=> {
         </div>
         <div>
           <dt>実務経験·資格</dt>
-          <dd>不問(お持ちの方勿論大歓迎！)<br />4については実務経験3年以上</dd>
+          <dd>不問(お持ちの方勿論大歓迎！)<br />WEB部門については実務経験3年以上</dd>
         </div>
         <div>
           <dt>年齢</dt>
-          <dd>不問(16~65歳まで)</dd>
+          <dd>不問(16歳から)</dd>
         </div>
         </Sdwp>
         </dl>

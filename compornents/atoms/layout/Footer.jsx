@@ -12,13 +12,13 @@ export const Footer = () => {
     <Sfcon>
     <Sfleft>
     <img src={Logo.src} alt="YK企画" />
-    <p>YK CO.LTD</p>
+    <p>YK CO,.LTD</p>
       <address>
       京都府京都市中京区御池通東洞院東入笹屋町436<br />
       永和御池ビル606号<br />
       Eiwa Oike Building No. 606, Oike-dori Higashinotoin-higashiiru, Nakagyo-ku, Kyoto, Kyoto, Japan
       <br /><br />
-      Tel. 075 600 2460 / Fax. 075 600 267
+      Tel. 075 600 2460 / Fax. 075 600 2678
       </address>
     </Sfleft>
     <Sright>
@@ -27,12 +27,11 @@ export const Footer = () => {
       <Sfli><Link href="/about" passHref><Slink>ABOUT</Slink></Link></Sfli>
       <Sfli><Link href="/service" passHref><Slink>SERVICE</Slink></Link></Sfli>
       <Sfli><Link href="/company" passHref><Slink>COMPANY</Slink></Link></Sfli>
-      <Sfli><Link href="/blog" passHref><Slink>BLOG</Slink></Link></Sfli>
+      <Sfli><Link href="/blog" passHref><Slink>TODAY'S YK</Slink></Link></Sfli>
       <Sfli><Link href="/links" passHref><Slink>LINKS</Slink></Link></Sfli>
       </Sful>
       <Sfsns>
         <li><span><a href="/links"><FontAwesomeIcon icon={faInstagram}/></a></span></li>
-        <li><span><a href="/links"><FontAwesomeIcon icon={faEnvelope}/></a></span></li>
       </Sfsns>
       </Sright>
       </Sfcon>
@@ -73,6 +72,9 @@ const Sfleft = styled.div`
     text-align: left;
     address {
       font-size: 14px;
+      @media screen and (max-width: 599px) {
+        font-size: 12px;
+      }
     }
     @media screen and (max-width: 1279px) {
       width: 45%;
@@ -111,6 +113,9 @@ const Sfli = styled.li`
   margin-right: 2%;
   margin-bottom: 15px;
   letter-spacing: .1em;
+  @media screen and (max-width: 599px) {
+    width: 45%;
+  }
   a {
     font-size: 15px;
     color: #908369;
@@ -122,6 +127,9 @@ const Sfsns = styled.ul`
     justify-content: flex-end;
     li {
       margin-left: 15px;
+      svg {
+        width: 15px;
+      }
     }
 `
 const Slink = styled.a`

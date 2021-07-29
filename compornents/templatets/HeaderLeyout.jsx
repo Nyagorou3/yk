@@ -29,27 +29,4 @@ const Swrapper = styled.div`
   background: #000;
   position: relative;
   z-index: 0;
-.cursor,
-.follower {
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  cursor: none;
-  posinter-events: none;
-}
-
-.cursor {
-  width: 8px;
-  height: 8px;
-  background-color: #000;
-  z-index: 1001;
-}
-
-.follower {
-  width: 40px;
-  height: 40px;
-  background-color: #fdfe00;
-  z-indes: 1000;
-}
 `

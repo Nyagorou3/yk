@@ -15,23 +15,23 @@ export const Mv = ()=> {
   return (
       <Smvwp>
         <SmaivTxt id="#wrapper-a">
-        <h2>
-        CONVENIENCE
+        <h2 className="letter">
+        <span><span className="in">CONVENIENCE</span></span>
         <br />
-        AND COMFORT
+        <span><span className="in2">AND COMFORT</span></span>
         <br />
-        FOR ALL
+        <span><span className="in3">FOR ALL</span></span>
         <br />
-        INVOLVED
+        <span><span className="in4">INVOLVED</span></span>
         </h2>
         <Normalbtn />
         </SmaivTxt>
-        <Smainl>
+        <Smainl data-scroll data-scroll-speed="-1">
         </Smainl>
-        <Smainr>
+        <Smainr data-scroll data-scroll-speed="1">
         <img src={Mainr.src} alt="YK企画" />
         </Smainr>
-        <p>
+        <p className="op">
         <span>
         We will continue to provide services that allow all
         </span>
@@ -44,7 +44,7 @@ export const Mv = ()=> {
         pass by, to experience comfort, including convenience
         </span>
         </p>
-        <img src={Mainimg.src} alt="YK企画" />
+        <img className="updw2" src={Mainimg.src} alt="YK企画" />
       </Smvwp>
   );
 }
@@ -68,7 +68,33 @@ const Smvwp = styled.div`
     font-weight: 500;
     color: #f2b741;
     letter-spacing: 1em;
+    opacity: 0;
     line-height: 2.5;
+    span {
+      overflow: hidden;
+      display: inline-block;
+      line-height: 1;
+      .in1 {
+        transform: translateY(100px);
+        display: inline-block;
+        animation: in 1.2s 1s forwards;
+      }
+      .in2 {
+        transform: translateY(100px);
+        display: inline-block;
+        animation: in 1.2s 1.2s forwards;
+      }
+      .in3 {
+        transform: translateY(100px);
+        display: inline-block;
+        animation: in 1.2s 1.4s forwards;
+      }
+      .in4 {
+        transform: translateY(100px);
+        display: inline-block;
+        animation: in 1.2s 1.6s forwards;
+      }
+    }
     @media screen and (max-width: 1279px) {
       font-size: 45px;
     }
@@ -86,6 +112,7 @@ const Smvwp = styled.div`
      position: absolute;
      right: 8%;
      top: 50%;
+     opacity: 0;
      @media screen and (max-width: 799px) {
         right: -2%;
      }

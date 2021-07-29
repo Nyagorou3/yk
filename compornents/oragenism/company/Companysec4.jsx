@@ -54,13 +54,6 @@ export const Companysec4 = ()=> {
             WEB制作関連事業
             </dd>
           </div>
-          <div>
-            <dt>
-            設立</dt>
-            <dd>
-            2020年9月
-            </dd>
-          </div>
           </dl>
         </Ssctxt>
       </Sinner>
@@ -152,10 +145,18 @@ const Ssctxt = styled.div`
       padding-right: 20px;
       font-weight: 600;
       font-size: 15px;
+      @media screen and (max-width: 599px) {
+        width: 100%;
+        margin-bottom: 5px;
+      }
     }
     dd {
       width: 60%;
       font-size: 15px;
+      @media screen and (max-width: 599px) {
+        width: 100%;
+        font-size: 13px;
+      }
     }
   }
 `
