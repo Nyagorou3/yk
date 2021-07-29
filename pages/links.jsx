@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Linkssec1 } from "../compornents/oragenism/links/Linkssec1";
 import DefaltLeyout  from "../compornents/templatets/DefaltLeyout";
-import Seo from '../compornents/Seo'
+import Seo from '../compornents/Seo2'
 
 export default function Links() {
   return (

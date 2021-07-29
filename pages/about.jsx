@@ -3,7 +3,7 @@ import { Aboutsec1 } from "../compornents/oragenism/about/Aboutsec1";
 import { Aboutsec2 } from "../compornents/oragenism/about/Aboutsec2";
 import { Aboutsec3 } from "../compornents/oragenism/about/Aboutsec3";
 import DefaltLeyout  from "../compornents/templatets/DefaltLeyout";
-import Seo from '../compornents/Seo'
+import Seo from '../compornents/Seo2'
 
 export default function About() {
   return (

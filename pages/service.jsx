@@ -4,7 +4,7 @@ import { Servicesec3 } from "../compornents/oragenism/service/Servicesec3";
 import { Servicesec4 } from "../compornents/oragenism/service/Servicesec4";
 import { TopContact } from "../compornents/oragenism/top/TopContact";
 import DefaltLeyout  from "../compornents/templatets/DefaltLeyout";
-import Seo from '../compornents/Seo'
+import Seo from '../compornents/Seo2'
 
 export default function Service() {
   return (

@@ -6,7 +6,7 @@ import { Recruitsec4 } from "../compornents/oragenism/recruit/Recruitsec4";
 import { Recruitsec5 } from "../compornents/oragenism/recruit/Recruitsec5";
 import { Recruitsec6 } from "../compornents/oragenism/recruit/Recruitsec6";
 import { Recruitsec7 } from "../compornents/oragenism/recruit/Recruitsec7";
-import Seo from '../compornents/Seo'
+import Seo from '../compornents/Seo2'
 
 import { Link as Scroll } from 'react-scroll';
 import HeaderLeyout  from "../compornents/templatets/HeaderLeyout";

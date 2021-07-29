@@ -4,7 +4,7 @@ import { Companysec2 } from "../compornents/oragenism/company/Companysec2";
 import { Companysec3 } from "../compornents/oragenism/company/Companysec3";
 import { Companysec4 } from "../compornents/oragenism/company/Companysec4";
 import DefaltLeyout  from "../compornents/templatets/DefaltLeyout";
-import Seo from '../compornents/Seo'
+import Seo from '../compornents/Seo2'
 
 export default function Company() {
   return (

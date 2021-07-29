@@ -5,7 +5,7 @@ import { TopService } from "../compornents/oragenism/top/TopService";
 import { TopRecruit } from "../compornents/oragenism/top/TopRecruit";
 import { TopContact } from "../compornents/oragenism/top/TopContact";
 import DefaltLeyout  from "../compornents/templatets/DefaltLeyout";
-import Seo from '../compornents/Seo'
+import Seo from '../compornents/Seo2'
 import Kazari1 from "../image/common/kazari1.png";
 import Noimg from "../image/common/noimage.png";
 import Seckazari from "../image/common/seckazari.png";
