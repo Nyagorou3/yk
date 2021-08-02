@@ -15,7 +15,7 @@ import Link from "next/link";
 
 export const TopService = ()=> {
   return (
-      <Sinner>
+      <Sinner data-scroll-section>
         <h2>
         <img className="kazari" src={Seckazari.src} alt="SERVICE" />
         SERVICE
@@ -27,7 +27,9 @@ export const TopService = ()=> {
             <span className="num">
             01
             </span>
-            <img src={Item1.src} alt="建築物各種法定検査" />
+            <div className="img_wp">
+            <img  data-scroll="" data-scroll-speed="-1" src={Item1.src} alt="建築物各種法定検査" />
+            </div>
             <h3>
             <span>Various legal inspections of buildings</span>
             建築物各種法定検査
@@ -41,7 +43,9 @@ export const TopService = ()=> {
             <span className="num">
             02
             </span>
-            <img src={Item2.src} alt="ホームインスペクション" />
+            <div className="img_wp">
+            <img  data-scroll="" data-scroll-speed="-1" src={Item2.src} alt="ホームインスペクション" />
+            </div>
             <h3>
             <span>Home inspection</span>
             ホームインスペクション
@@ -55,7 +59,9 @@ export const TopService = ()=> {
             <span className="num">
             03
             </span>
-            <img src={Item3.src} alt="電気工事" />
+            <div className="img_wp">
+            <img  data-scroll="" data-scroll-speed="-1" src={Item3.src} alt="電気工事" />
+            </div>
             <h3>
             <span>Electrical construction</span>
             電気工事
@@ -69,7 +75,9 @@ export const TopService = ()=> {
             <span className="num">
             04
             </span>
-            <img src={Item4.src} alt="環境・公害コンサルタント" />
+            <div className="img_wp">
+            <img  data-scroll="" data-scroll-speed="-1" src={Item4.src} alt="環境・公害コンサルタント" />
+            </div>
             <h3>
             <span>Environmental and pollution consultants</span>
             環境・公害コンサルタント
@@ -83,7 +91,9 @@ export const TopService = ()=> {
             <span className="num">
             05
             </span>
-            <img src={Item5.src} alt="給排水設備工事" />
+            <div className="img_wp">
+            <img  data-scroll="" data-scroll-speed="-1" src={Item5.src} alt="給排水設備工事" />
+            </div>
             <h3>
             <span>Water supply and drainage equipment construction</span>
             給排水設備工事
@@ -97,7 +107,9 @@ export const TopService = ()=> {
             <span className="num">
             06
             </span>
-            <img src={Item6.src} alt="WEB制作関連事業" />
+            <div className="img_wp">
+            <img  data-scroll="" data-scroll-speed="-1" src={Item6.src} alt="WEB制作関連事業" />
+            </div>
             <h3>
             <span>WEB production related business</span>
             WEB制作関連事業
@@ -215,9 +227,16 @@ const Sslist = styled.ul`
     @media screen and (max-width: 599px) {
       width: 46%;
     }
-    img {
-      width: 100%;
-      filter: grayscale(100%);
+    .img_wp {
+      position:relative;
+      overflow: hidden;
+      img {
+        width: 130%;
+        max-width: 130%;
+        filter: grayscale(100%);
+        display: inline-block;
+        transform: scale(1.2);
+      }
     }
     a {
       &:hover {

@@ -6,7 +6,7 @@ import { Txtbtn } from "../../atoms/btn/Txtbtn";
 
 export const Servicesec1 = ()=> {
   return (
-    <Sinner>
+    <Sinner data-scroll-section>
       <Sscimg>
       <img src={Sec1main.src} alt="service" />
       </Sscimg>

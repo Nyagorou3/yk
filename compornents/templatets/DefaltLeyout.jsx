@@ -5,10 +5,29 @@ import styled from "styled-components";
 import Head from 'next/head';
 import { gsap } from 'gsap/dist/gsap';
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { ReactElement, useEffect } from 'react';
+import { useRef, useEffect } from "react";
 import {TweenMax,TimelineMax} from "gsap";
 
+
+
 export default function DefaltLeyout({ children }) {
+
+  const scrollRef = useRef();
+
+    useEffect(() => {
+      if (typeof window === "undefined") {
+        return;
+      }
+
+      const scroll = import("locomotive-scroll").then((LocomotiveScroll) => {
+        new LocomotiveScroll.default({
+          el: scrollRef.current,
+          smooth: true
+        });
+      });
+
+      return () => scroll.destroy();
+    }, []);
 
   return (
     <>
@@ -19,7 +38,7 @@ export default function DefaltLeyout({ children }) {
       <div id="cursor"></div>
       <Border />
       <Header />
-      <div data-scroll-container className="scwp">
+      <div ref={scrollRef} className="scwp">
       { children }
       <Footer />
       </div>

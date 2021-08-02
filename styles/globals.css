@@ -138,7 +138,14 @@ h1, h2, h3, h4, h5, h6 { font-weight:normal; }
 @media screen and (max-width: 599px) {
   .slick-prev {
     right: 35% !important;
+    top: -30px !important;
   }
+  .slick-next {
+    top: -30px !important;
+  }
+  .slick-prev:before, .slick-next:before {
+    font-size: 30px !important;
+    }
 }
 
 /* clearfix 回り込み解除 ------------------------ */

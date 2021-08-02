@@ -11,7 +11,7 @@ import { TxtbtnlW } from "../../atoms/btn/TxtbtnlW";
 
 export const Companysec3 = ()=> {
   return (
-      <Srwap>
+      <Srwap  data-scroll-section>
       <Sinner>
         <Sscimg>
         <img src={CSec3.src} alt="GREETING" />

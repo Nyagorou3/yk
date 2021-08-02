@@ -13,7 +13,7 @@ export const Mv = ()=> {
 
 
   return (
-      <Smvwp>
+      <Smvwp data-scroll-section>
         <SmaivTxt id="#wrapper-a">
         <h2 className="letter">
         <span><span className="in">CONVENIENCE</span></span>
@@ -26,9 +26,9 @@ export const Mv = ()=> {
         </h2>
         <Normalbtn />
         </SmaivTxt>
-        <Smainl>
+        <Smainl data-scroll="" data-scroll-speed="-1">
         </Smainl>
-        <Smainr>
+        <Smainr data-scroll="" data-scroll-speed="1">
         <img src={Mainr.src} alt="YK企画" />
         </Smainr>
         <p className="op">

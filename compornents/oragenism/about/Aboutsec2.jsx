@@ -7,7 +7,7 @@ import { Txtbtn } from "../../atoms/btn/Txtbtn";
 
 export const Aboutsec2 = ()=> {
   return (
-      <Swp>
+      <Swp  data-scroll-section>
       <Sinner>
         <Ssctxt>
         <Sttl>

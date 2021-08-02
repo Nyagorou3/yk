@@ -5,7 +5,7 @@ import { Txtbtn } from "../../atoms/btn/Txtbtn";
 
 export const Companysec1 = ()=> {
   return (
-      <Sinner>
+      <Sinner  data-scroll-section>
         <Sscimg>
         <img src={ASec1.src} alt="YKの企業情報" />
         </Sscimg>

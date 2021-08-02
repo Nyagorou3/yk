@@ -8,7 +8,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 export const Footer = () => {
   return (
-    <Sfooter>
+    <Sfooter  data-scroll-section>
     <Sfcon>
     <Sfleft>
     <img src={Logo.src} alt="YK企画" />

@@ -34,8 +34,8 @@ export const Recruitsec7 = ()=> {
         </div>
         <div>
           <dt>休日</dt>
-          <dd>土日祝、年末年始(12/29~1/4)、春休み(3/21~3/25)、誕生日or記念日休暇<br />
-              こどもの看護休暇、介護休暇、有給休暇(法令に則り支給)</dd>
+          <dd>土日祝、有給休暇(法令に則り支給)、年末年始(12/29~1/4)、春休み(3/21~3/25)、誕生日or記念日休暇<br />
+              こどもの看護休暇、介護休暇、※年間休日128日</dd>
         </div>
         <div>
           <dt>加入保険</dt>
@@ -175,11 +175,18 @@ div {
     background: -webkit-linear-gradient(left,  rgba(119,152,221,1) 0%,rgba(191,131,219,1) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to right,  rgba(119,152,221,1) 0%,rgba(191,131,219,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7798dd', endColorstr='#bf83db',GradientType=1 ); /* IE6-9 */
+    @media screen and (max-width: 599px) {
+      font-size: 13px;
+      padding: 8px 5px;
+    }
   }
   dd {
     font-size: 14px;
     width: 70%;
     padding: 0 20px;
+    @media screen and (max-width: 599px) {
+      font-size: 13px;
+    }
   }
 }
 `

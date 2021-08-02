@@ -7,7 +7,7 @@ import { Txtbtn } from "../../atoms/btn/Txtbtn";
 
 export const Companysec4 = ()=> {
   return (
-      <Sinner>
+      <Sinner  data-scroll-section>
         <Ssctxt>
         <Sttl>
         <h2>INFORMATION</h2>

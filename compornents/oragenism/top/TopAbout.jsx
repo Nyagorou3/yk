@@ -36,9 +36,11 @@ export const TopAbout = ()=> {
     }
 
   return (
-      <Sinner>
+      <Sinner data-scroll-section>
         <Sscimg>
-        <img src={Sec1main.src} alt="about YK" />
+        <div>
+        <img data-scroll="" data-scroll-speed="-1" src={Sec1main.src} alt="about YK" />
+        </div>
         </Sscimg>
         <Ssctxt>
         <h2>ABOUT YK</h2>
@@ -75,6 +77,16 @@ const Sinner = styled.section`
 const Sscimg = styled.div`
   width: 50%;
   position:relative;
+  div {
+    position:relative;
+    overflow: hidden;
+    img {
+      opacity: 1;
+      transform: scale(1.2);
+      display: inline-block;
+    }
+  }
+
   @media screen and (max-width: 599px) {
     width: 65%;
     margin: 0 auto;

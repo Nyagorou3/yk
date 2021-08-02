@@ -13,7 +13,7 @@ import { Txtbtn } from "../../atoms/btn/Txtbtn";
 
 export const Servicesec3 = ()=> {
   return (
-    <Sinner>
+    <Sinner  data-scroll-section>
     <Sul>
     <li id="s1">
     <div className="img_wp">

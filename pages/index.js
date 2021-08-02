@@ -50,7 +50,7 @@ export default function Home({ blog }) {
     <Mv />
     <TopAbout />
     <TopService />
-    <Sinner>
+    <Sinner data-scroll-section>
       <Swrap>
       <h2>
       TODAY&apos;S YK
@@ -129,10 +129,10 @@ const Sinner = styled.section`
     @media screen and (max-width: 768px) {
       font-size: 40px;
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 599px) {
       padding-top: 85px;
       font-size: 36px;
-      margin-bottom: 20px;
+      margin-bottom: 45px;
     }
     .kazari {
       position: absolute;

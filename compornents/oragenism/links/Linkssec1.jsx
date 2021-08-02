@@ -7,7 +7,7 @@ import { Txtbtn } from "../../atoms/btn/Txtbtn";
 
 export const Linkssec1 = ()=> {
   return (
-      <Sinner>
+      <Sinner  data-scroll-section>
         <Ssctxt>
           <dl>
           <div>

@@ -7,7 +7,7 @@ import { Txtbtn } from "../../atoms/btn/Txtbtn";
 
 export const Aboutsec3 = ()=> {
   return (
-      <Swp>
+      <Swp  data-scroll-section>
       <Sinner>
         <Sscimg>
         <img src={ASec3.src} alt="PHILOSOPHY" />
