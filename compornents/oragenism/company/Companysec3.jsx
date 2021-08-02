@@ -13,7 +13,7 @@ export const Companysec3 = ()=> {
   return (
       <Srwap>
       <Sinner>
-        <Sscimg  data-scroll data-scroll-speed="-1">
+        <Sscimg>
         <img src={CSec3.src} alt="GREETING" />
         </Sscimg>
         <Ssctxt>

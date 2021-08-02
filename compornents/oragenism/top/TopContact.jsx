@@ -5,7 +5,7 @@ import { ATxtbtn } from "../../atoms/btn/ATxtbtn";
 export const TopContact = ()=> {
   return (
       <Sinner>
-        <Sscimg  data-scroll data-scroll-speed="1">
+        <Sscimg>
         <img src={Con1.src} alt="CONTACT" />
         </Sscimg>
         <Ssctxt>

@@ -21,8 +21,7 @@ const menuFunction = () => {
       <Sli><Link href="/company" passHref><Slink>COMPANY</Slink></Link></Sli>
       <Sli><Link href="/blog" passHref><Slink>TODAY'S YK</Slink></Link></Sli>
       <Sli><Link href="/links" passHref><Slink>LINKS</Slink></Link></Sli>
-      <Sli><a href="/links"><FontAwesomeIcon icon={faInstagram}/></a></Sli>
-      <Sli><a href="/links"><FontAwesomeIcon icon={faEnvelope}/></a></Sli>
+      <Sli><a href="/"><FontAwesomeIcon icon={faInstagram}/></a></Sli>
       </Sul>
 
       <nav>
@@ -34,18 +33,17 @@ const menuFunction = () => {
       </Shmenu>
       </SmenuButton>
       <Shcopy>
-        <Shlogo>YK CO,.LTD</Shlogo>
-        <span>© yk kikaku CO,.LTD all right reserved.</span>
+        <Shlogo>YK co.,Ltd.</Shlogo>
+        <span>© yk kikaku co.,Ltd. all right reserved.</span>
       </Shcopy>
       <Snul className={openMenu ? 'active' : '' }>
         <Snli><Link href="/" passHref><Slink><span>ホーム</span>TOP</Slink></Link></Snli>
         <Snli><Link href="/about" passHref><Slink><span>YKについて</span>ABOUT</Slink></Link></Snli>
         <Snli><Link href="/service" passHref><Slink><span>サービス</span>SERVICE</Slink></Link></Snli>
         <Snli><Link href="/company" passHref><Slink><span>会社概要</span>COMPANY</Slink></Link></Snli>
-        <Snli><Link href="/blog" passHref><Slink><span>今日のYK達</span>TODAY'S YK</Slink></Link></Snli>
+        <Snli><Link href="/blog" passHref><Slink><span>きょうのYKたち</span>TODAY'S YK</Slink></Link></Snli>
         <Snli><Link href="/links" passHref><Slink><span>リンク</span>LINKS</Slink></Link></Snli>
-        <Snli><a href="/links"><FontAwesomeIcon icon={faInstagram}/></a></Snli>
-        <Snli><a href="/links"><FontAwesomeIcon icon={faEnvelope}/></a></Snli>
+        <Snli><a href="/"><FontAwesomeIcon icon={faInstagram}/></a></Snli>
       </Snul>
       </nav>
     </Sheader>

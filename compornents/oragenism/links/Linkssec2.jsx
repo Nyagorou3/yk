@@ -1,78 +1,29 @@
 import styled from "styled-components";
+import Linkimg from "../../../image/common/link.png";
 import Crean from "../../../image/common/crean.png";
-import ASec2 from "../../../image/about/sec2.png";
-import ASecs1 from "../../../image/about/sec1_sub.png";
-import Kazari1 from "../../../image/common/kazari1.png";
+import ASec1 from "../../../image/company/sec1.png";
 import { Txtbtn } from "../../atoms/btn/Txtbtn";
 
-export const Aboutsec2 = ()=> {
+export const Linkssec2 = ()=> {
   return (
-      <Swp>
       <Sinner>
+        <Sscimg>
+        <img src={Linkimg.src} alt="LINK" />
+        </Sscimg>
         <Ssctxt>
         <Sttl>
-        <h3>人々の安心<br />
-        快適に寄り添う</h3>
+        <h2>LINKS</h2>
+        <h3>外部リンク</h3>
         </Sttl>
-        <p>関わる全ての人々に便利と快適を。<br />
-           その建物を利用する人や近くを通る人まで、全ての人々が便利、安心も含めた快適さを体感できるサービスを提供し続ける。
-        </p>
         </Ssctxt>
-        <Sscimg>
-        <img src={ASec2.src} alt="人々の安心 快適に寄り添う" />
-        </Sscimg>
       </Sinner>
-      </Swp>
   );
 }
-
-const Swp = styled.section`
-  position: relative;
-  &::before {
-    content: '';
-    position: absolute;
-    width: 90%;
-    height: 85%;
-    top: 50%;
-    left: 0;
-    background: rgba(228,221,202,.4);
-    z-index: -1;
-    @media screen and (max-width: 768px) {
-     height: 55%;
-    }
-    @media screen and (max-width: 599px) {
-      height: 75%;
-      top: 20%;
-    }
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    width: 200px;
-    height: 255px;
-    right: 7%;
-    bottom: -60%;
-    background: url(${Kazari1.src}) no-repeat;
-    background-size: contain;
-    @media screen and (max-width: 768px) {
-      width: 130px;
-      height: 155px;
-      right: 7%;
-      bottom: -5%;
-    }
-    @media screen and (max-width: 599px) {
-      width: 75px;
-      height: 120px;
-      right: 7%;
-      bottom: -10%;
-    }
-  }
-`
 
 const Sinner = styled.div`
   font-family: futura-pt, sans-serif;
   width: 90%;
-  margin: 200px 0 100px auto;
+  margin: 200px auto 100px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -80,15 +31,14 @@ const Sinner = styled.div`
   color: #000;
   @media screen and (max-width: 1279px) {
     width: 90%;
+    margin: 200px auto 30px 0;
   }
   @media screen and (max-width: 768px) {
   margin: 150px auto 0;
   flex-wrap: wrap;
-  flex-direction: column-reverse;
   }
   @media screen and (max-width: 599px) {
-    flex-wrap: wrap;
-    margin: 55px auto;
+    margin: 55px auto 0;
   }
 `
 const Sscimg = styled.div`
@@ -99,11 +49,32 @@ const Sscimg = styled.div`
   }
   @media screen and (max-width: 768px) {
     width: 95%;
-    margin: 0 -17% 0 0;
+    margin: 0 0 0 -10%;
   }
   @media screen and (max-width: 599px) {
     width: 100%;
-    margin: 45px -10% 0 auto;
+  }
+  &::before  {
+    content: '';
+    position: absolute;
+    width: 30%;
+    height: 230px;
+    right: 45%;
+    top: -253px;
+    background: url(${Crean.src}) no-repeat;
+    animation: updw2 4s 0s infinite;
+    background-size: contain;
+    @media screen and (max-width: 768px) {
+      background-size: contain;
+      height: 75px;
+      right: -65px;
+      top: -115px;
+    }
+    @media screen and (max-width: 599px) {
+      height: 75px;
+      right: 48%;
+      top: -45px;
+    }
   }
 `
 
@@ -120,14 +91,15 @@ const Ssctxt = styled.div`
   width: 30%;
   position:relative;
   @media screen and (max-width: 768px) {
-    width: 95%;
     display: flex;
+    justify-content: center;
     align-items: flex-start;
-    margin: 45px auto;
+    margin: 60px auto 0;
+    width: 90%;
   }
   @media screen and (max-width: 599px) {
     width: 95%;
-    margin-top: 50px;
+    margin-top: 40px;
   }
   h2{
     writing-mode: vertical-rl;
@@ -135,11 +107,9 @@ const Ssctxt = styled.div`
     letter-spacing: .1em;
     margin-left: 40px;
     font-weight: 600;
-    @media screen and (max-width: 1279px) {
-
-    }
     @media screen and (max-width: 599px) {
-
+      margin-left: 24px;
+      font-size: 13px;
     }
   }
   h3 {
@@ -148,6 +118,20 @@ const Ssctxt = styled.div`
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 25px;
+    .ptop {
+      display: inline-block;
+      transform: rotate(90deg) translate(-10px,-20px);
+      @media screen and (max-width: 599px) {
+        transform: rotate(90deg) translate(-10px,-10px);
+      }
+    }
+    span.pbottom {
+      display: inline-block;
+      transform: rotate(90deg) translate(-10px,20px);
+      @media screen and (max-width: 599px) {
+        transform: rotate(90deg) translate(-10px,10px);
+      }
+    }
     @media screen and (max-width: 1279px) {
       font-size: 24px;
     }
@@ -161,11 +145,11 @@ const Ssctxt = styled.div`
     margin-bottom: 50px;
     @media screen and (max-width: 768px) {
       width: 60%;
-      margin-left: 65px;
+      margin: 0;
     }
     @media screen and (max-width: 599px) {
-      font-size: 15px;
-      margin: 0 0 0 40px;
+      font-size: 14px;
+      margin-bottom: 32px;
     }
   }
 `

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Linkssec1 } from "../compornents/oragenism/links/Linkssec1";
+import { Linkssec2 } from "../compornents/oragenism/links/Linkssec2";
 import DefaltLeyout  from "../compornents/templatets/DefaltLeyout";
 import Seo from '../compornents/Seo2'
 
@@ -8,6 +9,7 @@ export default function Links() {
     <DefaltLeyout>
       <Seo title="LINKS | 株式会社YK企画" description="YK企画の外部リンク情報" />
       <Swp>
+      <Linkssec2 />
       <Linkssec1 />
       </Swp>
     </DefaltLeyout>

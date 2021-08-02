@@ -23,7 +23,7 @@ export const Companysec2 = ()=> {
             特定建築物調査員<br />
             建築設備検査員<br />
             防火設備検査員<br />
-            サーモグラファー<br />
+            赤外線建物診断技能師<br />
             建築物環境衛生管理技術者<br />
             福祉住環境コーディネーター
             </dd>
@@ -33,8 +33,12 @@ export const Companysec2 = ()=> {
               消防,
               通信設備</dt>
             <dd>
-              第二種電気工事士<br />
-              消防設備士
+              電気工事士<br />
+              消防設備士<br />
+              消防設備点検資格者<br />
+              第三種冷凍機械責任者<br />
+              第二種冷媒フロン類取扱技術者<br />
+              冷媒回収技術者
             </dd>
           </div>
           <div>
@@ -52,7 +56,9 @@ export const Companysec2 = ()=> {
             その他,各種技能講習</dt>
             <dd>
             高所作業車<br />
-            移動式クレーン,etc
+            小型移動式クレーン<br />
+            第二級陸上無線技士<br />
+            各種特別教育（フルハーネス・足場組立etc...）
             </dd>
           </div>
           </dl>
@@ -170,7 +176,7 @@ const Ssctxt = styled.div`
     }
     div {
       display: flex;
-      width: 45%;
+      width: 47%;
       margin-bottom: 45px;
       @media screen and (max-width: 1279px) {
         width: 100%;
@@ -180,7 +186,7 @@ const Ssctxt = styled.div`
       }
     }
     dt {
-      width: 35%;
+      width: 40%;
       padding-right: 20px;
       font-weight: 600;
       font-size: 15px;

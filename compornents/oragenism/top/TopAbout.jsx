@@ -36,11 +36,11 @@ export const TopAbout = ()=> {
     }
 
   return (
-      <Sinner data-scroll>
-        <Sscimg data-scroll data-scroll-speed="1">
+      <Sinner>
+        <Sscimg>
         <img src={Sec1main.src} alt="about YK" />
         </Sscimg>
-        <Ssctxt data-scroll data-scroll-speed="-1">
+        <Ssctxt>
         <h2>ABOUT YK</h2>
         <h3>関わる全ての人々に便利と快適を。</h3>
         <p>その建物を利用する人や近くを通る人まで、全ての人々が便利、安心も含めた快適さを体感できるサービスを提供し続ける。</p>

@@ -9,12 +9,6 @@ export const Linkssec1 = ()=> {
   return (
       <Sinner>
         <Ssctxt>
-        <Sttl>
-        <h2>LINKS</h2>
-        <h3>
-          外部リンク
-        </h3>
-        </Sttl>
           <dl>
           <div>
             <dt>定期報告関係(特定建築物、建築設備、防火設備)</dt>
@@ -70,9 +64,6 @@ export const Linkssec1 = ()=> {
           </div>
           </dl>
         </Ssctxt>
-        <Sscimg data-scroll data-scroll-speed="-2">
-        <img src={CSec2.src} alt="QUALIFICATION" />
-        </Sscimg>
       </Sinner>
   );
 }
@@ -80,72 +71,32 @@ export const Linkssec1 = ()=> {
 
 const Sinner = styled.div`
   font-family: futura-pt, sans-serif;
-  width: 90%;
-  margin: 200px 0 160px auto;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: left;
   color: #000;
   @media screen and (max-width: 1279px) {
-    width: 90%;
-    margin: 80px 0 105px auto;
+    width: 70%;
+    margin: 0 auto;
   }
   @media screen and (max-width: 768px) {
   margin: 30px auto 150px;
   }
   @media screen and (max-width: 599px) {
     flex-wrap: wrap;
-    margin: 55px auto;
-  }
-`
-const Sscimg = styled.div`
-  width: 35%;
-  min-width: 450px;
-  position:relative;
-  margin-top: -65px;
-  @media screen and (max-width: 1279px) {
-    min-width: 350px;
-    margin-top: -195px;
-  }
-  @media screen and (max-width: 768px) {
-    min-width: 250px;
-    margin-right: -6%;
-  }
-  img {
-    width: 100%;
-    @media screen and (max-width: 599px) {
-      width: 700%;
-      max-width: 700%;
-      position: relative;
-      left: -200%;
-    }
-  }
-  @media screen and (max-width: 599px) {
-    width: 95px;
-    overflow: hidden;
-    min-width: auto;
-    margin: -20% -6% 0 0;
+    margin: 0 auto;
+    width: 85%;
   }
 `
 
-const Sttl = styled.div`
-display: flex;
-flex-direction: row-reverse;
-justify-content: center;
-`
+
 
 const Ssctxt = styled.div`
-  width: 55%;
-  padding: 0 0 0 25px;
   position:relative;
-  @media screen and (max-width: 768px) {
-    width: 65%;
-  }
-  @media screen and (max-width: 599px) {
-    width: 70%;
-    margin-top: 0;
-  }
   h2 {
     writing-mode: vertical-rl;
     font-size: 16px;
@@ -173,7 +124,6 @@ const Ssctxt = styled.div`
     }
   }
   dl {
-    margin-top: 45px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -182,29 +132,33 @@ const Ssctxt = styled.div`
       margin-top: 25px;
     }
     div {
-      width: 100%;
+      width: 45%;
       margin-bottom: 45px;
       @media screen and (max-width: 1279px) {
         width: 100%;
       }
       @media screen and (max-width: 599px) {
         flex-wrap: wrap;
+        width: 100%;
       }
     }
     dt {
       padding-right: 20px;
       font-weight: 600;
-      font-size: 15px;
+      font-size: 17px;
+      margin-bottom: 10px;
       @media screen and (max-width: 1279px) {
-        width: 40%;
+        width: 100%;
       }
       @media screen and (max-width: 599px) {
         width: 100%;
         margin-bottom: 5px;
+        font-size: 14px;
       }
     }
     dd {
       font-size: 15px;
+      line-height: 2;
       @media screen and (max-width: 599px) {
         width: 100%;
         font-size: 13px;

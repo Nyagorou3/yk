@@ -9,6 +9,17 @@ body {
   position: relative;
   }
 
+  body::-webkit-scrollbar {
+    height: 40px;
+    width: 8px;
+  }
+  body::-webkit-scrollbar-thumb {
+  background: rgb(62 54 67);
+  }
+  body::-webkit-scrollbar-track {
+  background: rgba(92, 44, 117, .2);
+  }
+
   html.has-scroll-smooth {
     overflow: hidden;
   }

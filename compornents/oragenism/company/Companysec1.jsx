@@ -6,19 +6,15 @@ import { Txtbtn } from "../../atoms/btn/Txtbtn";
 export const Companysec1 = ()=> {
   return (
       <Sinner>
-        <Sscimg  data-scroll data-scroll-speed="1">
-        <img src={ASec1.src} alt="about YK" />
+        <Sscimg>
+        <img src={ASec1.src} alt="YKの企業情報" />
         </Sscimg>
         <Ssctxt>
         <Sttl>
         <h2>COMPANY</h2>
-        <h3>心を掴むものを<br />想像し続ける</h3>
+        <h3>心を掴むものを<br /><span className="ptop">“</span>そうぞう<span className="pbottom">”</span>し続ける</h3>
         </Sttl>
-        <p>YK企画はYK企画は全ての人の安心を
-            YK企画は全ての人の安心を
-            YK企画は全ての人の安心を
-            YK企画は全ての人の安心を
-            全ての人の安心を</p>
+        <p>人々の心を掴むもの、それは時代と共に常に変化しています。私たちはその流れを想像すると同時に、心を掴むものを私たちで創造していくことを重要視しています。</p>
         </Ssctxt>
       </Sinner>
   );
@@ -122,6 +118,20 @@ const Ssctxt = styled.div`
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 25px;
+    .ptop {
+      display: inline-block;
+      transform: rotate(90deg) translate(-10px,-20px);
+      @media screen and (max-width: 599px) {
+        transform: rotate(90deg) translate(-10px,-10px);
+      }
+    }
+    span.pbottom {
+      display: inline-block;
+      transform: rotate(90deg) translate(-10px,20px);
+      @media screen and (max-width: 599px) {
+        transform: rotate(90deg) translate(-10px,10px);
+      }
+    }
     @media screen and (max-width: 1279px) {
       font-size: 24px;
     }

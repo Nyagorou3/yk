@@ -9,16 +9,7 @@ import { ReactElement, useEffect } from 'react';
 import {TweenMax,TimelineMax} from "gsap";
 
 export default function DefaltLeyout({ children }) {
-  useEffect(() => {
-    import("locomotive-scroll").then(locomotiveModule => {
-          const scroll = new locomotiveModule.default({
-            el: document.querySelector('[data-scroll-container]'),
-            smooth: true,
-            multiplier: 1,
-            class: 'is-reveal'
-          })
-        })
-  }, [])
+
   return (
     <>
     <Swrapper>

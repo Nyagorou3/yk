@@ -7,7 +7,7 @@ import { Txtbtn } from "../../atoms/btn/Txtbtn";
 export const Servicesec1 = ()=> {
   return (
     <Sinner>
-      <Sscimg  data-scroll data-scroll-speed="-2">
+      <Sscimg>
       <img src={Sec1main.src} alt="service" />
       </Sscimg>
       <Ssctxt>

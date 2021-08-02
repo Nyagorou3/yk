@@ -9,7 +9,7 @@ export const Aboutsec3 = ()=> {
   return (
       <Swp>
       <Sinner>
-        <Sscimg data-scroll data-scroll-speed="-2">
+        <Sscimg>
         <img src={ASec3.src} alt="PHILOSOPHY" />
         </Sscimg>
         <Ssctxt>

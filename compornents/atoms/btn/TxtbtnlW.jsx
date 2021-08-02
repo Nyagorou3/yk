@@ -74,12 +74,15 @@ const StBtn = styled.div`
     }
     &:hover {
        background: #fff;
+       overflow: hidden;
        &::before {
           background: #000;
+          left: 150%;
          }
       &::after {
         border-left: 2px solid #000;
         border-bottom: 2px solid #000;
+        right: 38px;
         }
     }
 `

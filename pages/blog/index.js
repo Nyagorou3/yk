@@ -18,7 +18,7 @@ export default function Home({ blog }) {
     <Sinner>
       <Swrap>
       <h2>
-      BLOG
+      TODAY'S YK
       </h2>
       <SblogList>
       {blog.map((blog) => (
@@ -160,13 +160,17 @@ const SblogList = styled.ul`
       font-size: 15px;
       margin-top: 15px;
       display: block;
+      @media screen and (max-width: 599px) {
+        font-size: 13px;
+      }
     }
     p {
       margin: 5px 0 0;
       font-weight: 600;
       font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3","游ゴシック体", YuGothic , "游ゴシック", "Yu Gothic";
       @media screen and (max-width: 599px) {
-        font-size: 16px;
+        font-size: 14px;
+        line-height: 1.6;
       }
     }
   }

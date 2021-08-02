@@ -12,7 +12,7 @@ export const Footer = () => {
     <Sfcon>
     <Sfleft>
     <img src={Logo.src} alt="YK企画" />
-    <p>YK CO,.LTD</p>
+    <p>YK co.,Ltd.</p>
       <address>
       京都府京都市中京区御池通東洞院東入笹屋町436<br />
       永和御池ビル606号<br />

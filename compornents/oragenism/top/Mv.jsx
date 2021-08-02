@@ -26,9 +26,9 @@ export const Mv = ()=> {
         </h2>
         <Normalbtn />
         </SmaivTxt>
-        <Smainl data-scroll data-scroll-speed="-1">
+        <Smainl>
         </Smainl>
-        <Smainr data-scroll data-scroll-speed="1">
+        <Smainr>
         <img src={Mainr.src} alt="YK企画" />
         </Smainr>
         <p className="op">

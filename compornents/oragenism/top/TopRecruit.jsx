@@ -23,7 +23,7 @@ export const TopRecruit = ()=> {
         <TxtbtnlW to="/recruit" btntxt="MORE" />
         </div>
         </Ssctxt>
-        <Sscimg data-scroll data-scroll-speed="1">
+        <Sscimg>
         <img src={Sec4main.src} alt="RECRUIT" />
         </Sscimg>
       </Sinner>

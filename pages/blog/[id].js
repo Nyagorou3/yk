@@ -103,9 +103,9 @@ const Sinner = styled.section`
     @media screen and (max-width: 768px) {
       font-size: 40px;
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 599px) {
       padding-top: 85px;
-      font-size: 36px;
+      font-size: 32px;
       margin-bottom: 20px;
     }
     .kazari {
@@ -126,6 +126,9 @@ const Swp = styled.div`
   h1 {
     font-size: 36px;
     font-weight: 600;
+    @media screen and (max-width: 599px) {
+      font-size: 32px;
+    }
   }
   time {
     font-family: futura-pt, sans-serif;
@@ -134,6 +137,12 @@ const Swp = styled.div`
   }
   .b_body {
     margin: 45px 0 80px;
+    p {
+      font-size: 16px;
+      @media screen and (max-width: 599px) {
+        font-size: 15px;
+      }
+    }
   }
 
 `
