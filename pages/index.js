@@ -53,7 +53,7 @@ export default function Home({ blog }) {
     <Sinner>
       <Swrap>
       <h2>
-      TODAY'S YK
+      TODAY&apos;S YK
       </h2>
 
 
