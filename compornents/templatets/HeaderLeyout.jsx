@@ -3,10 +3,12 @@ import { Header } from "../atoms/layout/Header";
 import { BorderW } from "../atoms/layout/BorderW";
 import styled from "styled-components";
 import Head from 'next/head';
-
+import { useRef, useEffect } from "react";
 
 
 export default function HeaderLeyout({ children }) {
+
+
   return (
     <>
     <Swrapper>
@@ -14,7 +16,6 @@ export default function HeaderLeyout({ children }) {
     <link rel="stylesheet" href="https://use.typekit.net/bze5nui.css" />
     </Head>
     <div className="cursor"></div>
-    <div className="follower"></div>
       <BorderW />
       <Header />
       {children}

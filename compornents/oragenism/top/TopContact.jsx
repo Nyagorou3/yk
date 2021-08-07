@@ -45,7 +45,7 @@ const Sinner = styled.section`
 const Sscimg = styled.div`
   width: 50%;
   position:relative;
-  transition: .8s;
+  transition: .8s transform;
   transform: scale(0);
   &.is_show {
     transform: scale(1);
@@ -63,7 +63,7 @@ const Ssctxt = styled.div`
   width: 45%;
   position:relative;
   opacity: 0;
-  transition: 1.2s;
+  transition: 1.2s opacity;
   &.is_show {
     opacity: 1;
   }

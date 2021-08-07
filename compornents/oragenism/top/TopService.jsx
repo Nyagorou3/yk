@@ -222,7 +222,7 @@ const Sslist = styled.ul`
     width: 29%;
     text-align: left;
     opacity: 0;
-    transition: .8s 1s;
+    transition: .8s 1s opacity;
     @media screen and (max-width: 768px) {
       width: 30%;
     }
@@ -242,7 +242,7 @@ const Sslist = styled.ul`
       position:relative;
       overflow: hidden;
       transform: scale(.5);
-      transition: .8s 1.5s;
+      transition: .8s 1.5s transform;
       img {
         width: 130%;
         max-width: 130%;

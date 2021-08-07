@@ -24,7 +24,7 @@ const Wrapper = styled.div`
   height: 100vh;
   top: 0; bottom: 0;
   left: 0; right: 0;
-  background: rgb(33 31 24);
+  background: rgb(33 25 37);
   pointer-events: auto;
   transition: opacity .2s ease-in-out;
   z-index: 1000;
@@ -35,8 +35,9 @@ const Wrapper = styled.div`
   p {
     position: absolute;
     top: 50%;
+    width: 90%;
     left: 50%;
-    color: #664f2b;
+    color: #8c6a3a;
     font-size: 1.2em;
     font-weight: 600;
     font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3","游ゴシック体", YuGothic , "游ゴシック", "Yu Gothic";

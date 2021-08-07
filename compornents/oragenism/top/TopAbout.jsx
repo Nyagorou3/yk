@@ -78,7 +78,7 @@ const Sscimg = styled.div`
   width: 40%;
   position:relative;
   opacity: 0;
-  transition: .9s;
+  transition: .9s opacity;
   &.is_show {
     opacity: 1;
     div {
@@ -142,10 +142,10 @@ const Ssctxt = styled.div`
   width: 45%;
   position:relative;
   opacity: 0;
-  transition: .8s 1.5s;
+  transition: .8s 1.5s opacity;
   &.is_show {
     opacity: 1;
-    transition: .8s;
+    transition: .8s opacity;
   }
   @media screen and (max-width: 599px) {
     width: 100%;

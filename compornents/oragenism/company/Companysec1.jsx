@@ -153,6 +153,7 @@ const Ssctxt = styled.div`
     .ptop {
       position: absolute;
       top: -25px;
+      right: 1.5em;
       writing-mode: initial;
       @media screen and (max-width: 599px) {
         top: -15px;

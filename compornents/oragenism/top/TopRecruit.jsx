@@ -54,7 +54,6 @@ const Sinner = styled.section`
   font-family: futura-pt, sans-serif;
   position:relative;
   width: 80%;
-  /* max-width: 1280px; */
   margin: 250px auto;
   display: flex;
   justify-content: space-between;
@@ -107,7 +106,7 @@ const Sscimg = styled.div`
       }
     }
     &::after  {
-      height: 194px;
+      height: 195px;
       @media screen and (max-width: 799px) {
         width: 55%;
       }
@@ -136,9 +135,10 @@ const Sscimg = styled.div`
   &::after  {
     content: '';
     position: absolute;
-    right: -405px;
     bottom: -110px;
-    width: 100%;
+    right: 0;
+    bottom: -110px;
+    width: 300px;
     height: 0;
     transition: .8s 1s;
     background: url(${Sec4sub1.src}) no-repeat;
