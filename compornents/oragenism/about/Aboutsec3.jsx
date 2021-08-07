@@ -9,10 +9,12 @@ export const Aboutsec3 = ()=> {
   return (
       <Swp  data-scroll-section>
       <Sinner>
-        <Sscimg>
-        <img src={ASec3.src} alt="PHILOSOPHY" />
+        <Sscimg data-scroll="">
+        <div>
+        <img data-scroll="" data-scroll-speed="-2" src={ASec3.src} alt="PHILOSOPHY" />
+        </div>
         </Sscimg>
-        <Ssctxt>
+        <Ssctxt data-scroll="">
         <Sttl>
         <h2>PHILOSOPHY</h2>
         <h3>
@@ -90,6 +92,15 @@ const Sscimg = styled.div`
   min-width: 450px;
   position:relative;
   margin-top: -65px;
+  &.is_show {
+    opacity: 1;
+    transform: scale(1) translate(0, 0);
+    div {
+      &::before {
+        right: 105%;
+      }
+    }
+  }
   @media screen and (max-width: 1279px) {
     min-width: 350px;
     margin-top: -195px;
@@ -97,6 +108,21 @@ const Sscimg = styled.div`
   @media screen and (max-width: 768px) {
     min-width: 250px;
     margin-left: -10%;
+  }
+  div {
+    position:relative;
+    overflow: hidden;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background: rgba(228,221,202,1.0);
+      z-index: 1;
+      transition: .9s right;
+    }
   }
   img {
     width: 100%;
@@ -120,6 +146,11 @@ const Sttl = styled.div`
 const Ssctxt = styled.div`
   width: 50%;
   position:relative;
+  opacity: 0;
+  &.is_show {
+    opacity: 1;
+    transition: 1.5s .8s opacity;
+  }
   @media screen and (max-width: 768px) {
     width: 65%;
   }

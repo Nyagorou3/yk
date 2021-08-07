@@ -9,7 +9,7 @@ export const Aboutsec2 = ()=> {
   return (
       <Swp  data-scroll-section>
       <Sinner>
-        <Ssctxt>
+        <Ssctxt data-scroll>
         <Sttl>
         <h3>人々の安心<br />
         快適に寄り添う</h3>
@@ -18,8 +18,10 @@ export const Aboutsec2 = ()=> {
            その建物を利用する人や近くを通る人まで、全ての人々が便利、安心も含めた快適さを体感できるサービスを提供し続ける。
         </p>
         </Ssctxt>
-        <Sscimg>
-        <img src={ASec2.src} alt="人々の安心 快適に寄り添う" />
+        <Sscimg data-scroll="">
+        <div>
+        <img data-scroll="" data-scroll-speed="-1" src={ASec2.src} alt="人々の安心 快適に寄り添う" />
+        </div>
         </Sscimg>
       </Sinner>
       </Swp>
@@ -94,8 +96,35 @@ const Sinner = styled.div`
 const Sscimg = styled.div`
   width: 65%;
   position:relative;
-  img {
-    width: 100%;
+  &.is_show {
+    opacity: 1;
+    transform: scale(1) translate(0, 0);
+    div {
+      &::before {
+        left: 105%;
+      }
+    }
+  }
+  div {
+    position:relative;
+    overflow: hidden;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(228,221,202,1.0);
+      z-index: 1;
+      transition: .9s left;
+    }
+    img {
+      width: 100%;
+      opacity: 1;
+      transform: scale(1.2);
+      display: inline-block;
+    }
   }
   @media screen and (max-width: 768px) {
     width: 95%;
@@ -119,6 +148,11 @@ justify-content: center;
 const Ssctxt = styled.div`
   width: 30%;
   position:relative;
+  opacity: 0;
+  &.is_show {
+    opacity: 1;
+    transition: 1.5s .8s opacity;
+  }
   @media screen and (max-width: 768px) {
     width: 95%;
     display: flex;

@@ -21,7 +21,7 @@ export const TopService = ()=> {
         SERVICE
         </h2>
         <Sslist>
-          <li>
+          <li data-scroll>
             <Link href="/service#s1">
             <a>
             <span className="num">
@@ -37,7 +37,7 @@ export const TopService = ()=> {
             </a>
             </Link>
           </li>
-          <li>
+          <li data-scroll>
             <Link href="/service#s2">
             <a>
             <span className="num">
@@ -53,7 +53,7 @@ export const TopService = ()=> {
             </a>
             </Link>
           </li>
-          <li>
+          <li data-scroll>
             <Link href="/service#s3">
             <a>
             <span className="num">
@@ -69,7 +69,7 @@ export const TopService = ()=> {
             </a>
             </Link>
           </li>
-          <li>
+          <li data-scroll>
             <Link href="/service#s4">
             <a>
             <span className="num">
@@ -85,7 +85,7 @@ export const TopService = ()=> {
             </a>
             </Link>
           </li>
-          <li>
+          <li data-scroll>
             <Link href="/service#s5">
             <a>
             <span className="num">
@@ -101,7 +101,7 @@ export const TopService = ()=> {
             </a>
             </Link>
           </li>
-          <li>
+          <li data-scroll>
             <Link href="/service#s6">
             <a>
             <span className="num">
@@ -221,15 +221,28 @@ const Sslist = styled.ul`
   li {
     width: 29%;
     text-align: left;
+    opacity: 0;
+    transition: .8s 1s;
     @media screen and (max-width: 768px) {
       width: 30%;
     }
     @media screen and (max-width: 599px) {
       width: 46%;
     }
+    &.is_show {
+      opacity: 1;
+      .img_wp {
+        transform: scale(1);
+        &::before {
+          height: 0;
+        }
+      }
+    }
     .img_wp {
       position:relative;
       overflow: hidden;
+      transform: scale(.5);
+      transition: .8s 1.5s;
       img {
         width: 130%;
         max-width: 130%;

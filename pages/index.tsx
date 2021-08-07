@@ -1,11 +1,11 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 import  { Mv } from "../compornents/oragenism/top/Mv";
 import { TopAbout } from "../compornents/oragenism/top/TopAbout";
 import { TopService } from "../compornents/oragenism/top/TopService";
 import { TopRecruit } from "../compornents/oragenism/top/TopRecruit";
 import { TopContact } from "../compornents/oragenism/top/TopContact";
 import DefaltLeyout  from "../compornents/templatets/DefaltLeyout";
-import Seo from '../compornents/Seo2'
+import Seo from '../compornents/Seo2';
 import Kazari1 from "../image/common/kazari1.png";
 import Noimg from "../image/common/noimage.png";
 import Seckazari from "../image/common/seckazari.png";
@@ -23,11 +23,19 @@ import Date from "../compornents/date";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Loading from '../compornents/Loading';
 
+import { ReactElement, useEffect, useState } from 'react';
 
 export default function Home({ blog }) {
 
+  const [ isShowLoading, setIsShowLoading ] = useState(true);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setIsShowLoading(false);
+    }, 1000);
+  });
 
   const settings = {
     dots: false,
@@ -47,6 +55,7 @@ export default function Home({ blog }) {
   return (
     <DefaltLeyout>
     <Seo />
+    <Loading isShow={ isShowLoading }  />
     <Mv />
     <TopAbout />
     <TopService />

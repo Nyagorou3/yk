@@ -13,10 +13,12 @@ export const Companysec3 = ()=> {
   return (
       <Srwap  data-scroll-section>
       <Sinner>
-        <Sscimg>
-        <img src={CSec3.src} alt="GREETING" />
+        <Sscimg data-scroll>
+        <div>
+        <img data-scroll="" data-scroll-speed="-1" src={CSec3.src} alt="GREETING" />
+        </div>
         </Sscimg>
-        <Ssctxt>
+        <Ssctxt data-scroll>
         <div>
         <h2>GREETING</h2>
         <h3>ご挨拶</h3>
@@ -121,6 +123,11 @@ const Ssctxt = styled.div`
   position:relative;
   display: flex;
   justify-content: center;
+  opacity: 0;
+  &.is_show {
+    opacity: 1;
+    transition: 1.5s .8s opacity;
+  }
   @media screen and (max-width: 599px) {
   width: 100%;
   margin-top: 70px;

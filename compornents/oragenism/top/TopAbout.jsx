@@ -37,12 +37,12 @@ export const TopAbout = ()=> {
 
   return (
       <Sinner data-scroll-section>
-        <Sscimg>
+        <Sscimg data-scroll>
         <div>
         <img data-scroll="" data-scroll-speed="-1" src={Sec1main.src} alt="about YK" />
         </div>
         </Sscimg>
-        <Ssctxt>
+        <Ssctxt data-scroll>
         <h2>ABOUT YK</h2>
         <h3>関わる全ての人々に便利と快適を。</h3>
         <p>その建物を利用する人や近くを通る人まで、全ての人々が便利、安心も含めた快適さを体感できるサービスを提供し続ける。</p>
@@ -75,12 +75,34 @@ const Sinner = styled.section`
   }
 `
 const Sscimg = styled.div`
-  width: 50%;
+  width: 40%;
   position:relative;
+  opacity: 0;
+  transition: .9s;
+  &.is_show {
+    opacity: 1;
+    div {
+      &::before {
+        right: 105%;
+      }
+    }
+  }
   div {
     position:relative;
     overflow: hidden;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background: rgba(228,221,202,1.0);
+      z-index: 1;
+      transition: .9s right;
+    }
     img {
+      width: 100%;
       opacity: 1;
       transform: scale(1.2);
       display: inline-block;
@@ -101,6 +123,7 @@ const Sscimg = styled.div`
     width: 100%;
     height: 197px;
     background: url(${Mou.src}) no-repeat;
+    z-index: 2;
     @media screen and (max-width: 768px) {
         background-size: contain;
         left: -65px;
@@ -118,6 +141,12 @@ const Sscimg = styled.div`
 const Ssctxt = styled.div`
   width: 45%;
   position:relative;
+  opacity: 0;
+  transition: .8s 1.5s;
+  &.is_show {
+    opacity: 1;
+    transition: .8s;
+  }
   @media screen and (max-width: 599px) {
     width: 100%;
     margin-top: 80px;

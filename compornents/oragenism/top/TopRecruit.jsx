@@ -10,7 +10,7 @@ export const TopRecruit = ()=> {
   return (
       <Srwap data-scroll-section>
       <Sinner>
-        <Ssctxt>
+        <Ssctxt data-scroll>
         <div>
         <h2>RECRUIT</h2>
         <h3>型にとらわれない
@@ -99,13 +99,28 @@ const Sscimg = styled.div`
     width: 65%;
     margin: 100px auto 0;
   }
+  &.is_show {
+    &::before  {
+      width: 100%;
+      @media screen and (max-width: 799px) {
+        width: 55%;
+      }
+    }
+    &::after  {
+      height: 194px;
+      @media screen and (max-width: 799px) {
+        width: 55%;
+      }
+    }
+  }
   &::before  {
     content: '';
     position: absolute;
     left: -170px;
     top: -135px;
-    width: 100%;
+    width: 0;
     height: 282px;
+    transition: .8s;
     background: url(${Sec4sub2.src}) no-repeat;
     z-index: 1;
     @media screen and (max-width: 799px) {
@@ -124,11 +139,12 @@ const Sscimg = styled.div`
     right: -405px;
     bottom: -110px;
     width: 100%;
-    height: 194px;
+    height: 0;
+    transition: .8s 1s;
     background: url(${Sec4sub1.src}) no-repeat;
     @media screen and (max-width: 799px) {
       background-size: contain;
-      width: 55%;
+      width: 0;
       right: -70px;
       bottom: -170px;
     }
@@ -140,6 +156,11 @@ const Ssctxt = styled.div`
   position:relative;
   display: flex;
   justify-content: center;
+  opacity: 0;
+  transition: .8s .5s;
+  &.is_show {
+    opacity: 1;
+  }
   @media screen and (max-width: 599px) {
   width: 100%;
   }
@@ -156,7 +177,6 @@ const Ssctxt = styled.div`
       margin-bottom: 20px;
       }
     }
-  }
   h3 {
     font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3","游ゴシック体", YuGothic , "游ゴシック", "Yu Gothic";
     font-size: 24px;

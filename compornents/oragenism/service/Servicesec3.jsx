@@ -16,13 +16,15 @@ export const Servicesec3 = ()=> {
     <Sinner  data-scroll-section>
     <Sul>
     <li id="s1">
-    <div className="img_wp">
+    <div className="img_wp" data-scroll="">
     <span className="num">
     01
     </span>
-    <img src={S1.src} alt="建築物各種法定検査" />
+    <div>
+    <img data-scroll="" data-scroll-speed="-1" src={S1.src} alt="建築物各種法定検査" />
     </div>
-    <div className="txt_wp">
+    </div>
+    <div className="txt_wp" data-scroll="">
     <h3>
     <span>Various legal inspections of buildings</span>
     建築物各種法定検査
@@ -124,13 +126,15 @@ export const Servicesec3 = ()=> {
     </div>
     </li>
     <li id="s2">
-    <div className="img_wp">
+    <div className="img_wp" data-scroll="">
     <span className="num">
     02
     </span>
-    <img src={S2.src} alt="ホームインスペクション" />
+    <div>
+    <img data-scroll="" data-scroll-speed="-1" src={S2.src} alt="ホームインスペクション" />
     </div>
-    <div className="txt_wp">
+    </div>
+    <div className="txt_wp" data-scroll="">
     <h3>
     <span>Home inspection</span>
     ホームインスペクション
@@ -151,13 +155,15 @@ export const Servicesec3 = ()=> {
     </div>
     </li>
     <li id="s3">
-    <div className="img_wp">
+    <div className="img_wp" data-scroll="">
     <span className="num">
     03
     </span>
-    <img src={S3.src} alt="電気工事" />
+    <div>
+    <img data-scroll="" data-scroll-speed="-1" src={S3.src} alt="電気工事" />
     </div>
-    <div className="txt_wp">
+    </div>
+    <div className="txt_wp" data-scroll="">
     <h3>
     <span>Electrical construction</span>
     電気工事
@@ -170,13 +176,15 @@ export const Servicesec3 = ()=> {
     </div>
     </li>
     <li id="s4">
-    <div className="img_wp">
+    <div className="img_wp" data-scroll="">
     <span className="num">
     04
     </span>
-    <img src={S4.src} alt="環境・公害コンサルタント" />
+    <div>
+    <img data-scroll="" data-scroll-speed="-1" src={S4.src} alt="環境・公害コンサルタント" />
     </div>
-    <div className="txt_wp">
+    </div>
+    <div className="txt_wp" data-scroll="">
     <h3>
     <span>Environmental and pollution consultants</span>
     環境・公害コンサルタント
@@ -187,13 +195,15 @@ export const Servicesec3 = ()=> {
     </div>
     </li>
     <li id="s5">
-    <div className="img_wp">
+    <div className="img_wp" data-scroll="">
     <span className="num">
     05
     </span>
-    <img src={S5.src} alt="給排水設備工事" />
+    <div>
+    <img data-scroll="" data-scroll-speed="-1" src={S5.src} alt="給排水設備工事" />
     </div>
-    <div className="txt_wp">
+    </div>
+    <div className="txt_wp" data-scroll="">
     <h3>
     <span>Water supply and drainage equipment construction</span>
     給排水設備工事
@@ -205,13 +215,15 @@ export const Servicesec3 = ()=> {
     </div>
     </li>
     <li id="s6">
-    <div className="img_wp">
+    <div className="img_wp" data-scroll="">
     <span className="num">
     06
     </span>
-    <img src={S6.src} alt="WEB制作関連事業" />
+    <div>
+    <img data-scroll="" data-scroll-speed="-1" src={S6.src} alt="WEB制作関連事業" />
     </div>
-    <div className="txt_wp">
+    </div>
+    <div className="txt_wp" data-scroll="">
     <h3>
     <span>WEB production related business</span>
     WEB制作関連事業
@@ -270,9 +282,39 @@ const Sul = styled.ul`
       .num {
         font-size: 24px;
       }
+      &.is_show {
+        div {
+          &::before {
+            right: 105%;
+          }
+        }
+      }
+      div {
+        position: relative;
+        overflow: hidden;
+        &::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          right: 0;
+          background: rgba(228,221,202,1.0);
+          z-index: 1;
+          transition: .9s right;
+        }
+        img {
+          width: 120%;
+        }
+      }
     }
     .txt_wp {
       width: 45%;
+      opacity: 0;
+      &.is_show {
+        opacity: 1;
+        transition: 1.5s .8s opacity;
+      }
       @media screen and (max-width: 768px) {
         margin-top: 45px;
       }

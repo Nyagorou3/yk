@@ -22,7 +22,9 @@ export default function DefaltLeyout({ children }) {
       const scroll = import("locomotive-scroll").then((LocomotiveScroll) => {
         new LocomotiveScroll.default({
           el: scrollRef.current,
-          smooth: true
+          smooth: true,
+          class: 'is_show',
+          repeat: true
         });
       });
 

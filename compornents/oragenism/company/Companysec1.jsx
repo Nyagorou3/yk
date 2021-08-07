@@ -6,13 +6,15 @@ import { Txtbtn } from "../../atoms/btn/Txtbtn";
 export const Companysec1 = ()=> {
   return (
       <Sinner  data-scroll-section>
-        <Sscimg>
-        <img src={ASec1.src} alt="YKの企業情報" />
+        <Sscimg data-scroll>
+        <div>
+        <img data-scroll="" data-scroll-speed="-1" src={ASec1.src} alt="YKの企業情報" />
+        </div>
         </Sscimg>
-        <Ssctxt>
+        <Ssctxt data-scroll>
         <Sttl>
         <h2>COMPANY</h2>
-        <h3>心を掴むものを<br /><span className="ptop">“</span>そうぞう<span className="pbottom">”</span>し続ける</h3>
+        <h3>心を掴むものを<br /><span className="ptop">”</span>そうぞう <span className="pbottom">“</span>し続ける</h3>
         </Sttl>
         <p>人々の心を掴むもの、それは時代と共に常に変化しています。私たちはその流れを想像すると同時に、心を掴むものを私たちで創造していくことを重要視しています。</p>
         </Ssctxt>
@@ -76,6 +78,30 @@ const Sscimg = styled.div`
       top: -45px;
     }
   }
+  &.is_show {
+    opacity: 1;
+    transform: scale(1) translate(0, 0);
+    div {
+      &::before {
+        right: 105%;
+      }
+    }
+  }
+  div {
+    position:relative;
+    overflow: hidden;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background: rgba(228,221,202,1.0);
+      z-index: 1;
+      transition: .9s right;
+    }
+  }
 `
 
 const Sttl = styled.div`
@@ -90,6 +116,11 @@ justify-content: center;
 const Ssctxt = styled.div`
   width: 30%;
   position:relative;
+  opacity: 0;
+  &.is_show {
+    opacity: 1;
+    transition: 1.5s .8s opacity;
+  }
   @media screen and (max-width: 768px) {
     display: flex;
     justify-content: space-between;
@@ -118,18 +149,25 @@ const Ssctxt = styled.div`
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 25px;
+    position:relative;
     .ptop {
-      display: inline-block;
-      transform: rotate(90deg) translate(-10px,-20px);
+      position: absolute;
+      top: -25px;
+      writing-mode: initial;
       @media screen and (max-width: 599px) {
-        transform: rotate(90deg) translate(-10px,-10px);
+        top: -15px;
       }
     }
     span.pbottom {
-      display: inline-block;
-      transform: rotate(90deg) translate(-10px,20px);
+      position: absolute;
+      left: 0;
+      bottom: 90px;
+      writing-mode: initial;
+      @media screen and (max-width: 768px) {
+        bottom: 72px;
+      }
       @media screen and (max-width: 599px) {
-        transform: rotate(90deg) translate(-10px,10px);
+        bottom: 50px;
       }
     }
     @media screen and (max-width: 1279px) {

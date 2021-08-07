@@ -8,7 +8,7 @@ export const Servicesec4 = ()=> {
   return (
       <Swp  data-scroll-section>
 
-      <SPro>
+      <SPro data-scroll="">
         <h3>FLOW (example)</h3>
         <Sscroll>
         <SproWp>
@@ -237,6 +237,11 @@ const SPro = styled.div`
   width: 80%;
   margin: 50px 0 100px auto;
   color: #000;
+  opacity: 0;
+  &.is_show {
+    opacity: 1;
+    transition: 1.5s .8s opacity;
+  }
   @media screen and (max-width: 1279px) {
     margin: 30px auto 60px;
     width: 90%;

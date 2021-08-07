@@ -13,7 +13,6 @@ export default function Service() {
       <DefaltLeyout>
       <Seo title="YK企画の展開する事業 | 株式会社YK企画" description="YK企画の展開する事業 | YK企画の展開する事業を紹介します。" />
       <Servicesec1 />
-      <Servicesec2 />
       <Servicesec3 />
       <Servicesec4 />
       <TopContact />

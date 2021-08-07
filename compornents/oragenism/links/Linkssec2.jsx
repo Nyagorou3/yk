@@ -7,10 +7,12 @@ import { Txtbtn } from "../../atoms/btn/Txtbtn";
 export const Linkssec2 = ()=> {
   return (
       <Sinner  data-scroll-section>
-        <Sscimg>
-        <img src={Linkimg.src} alt="LINK" />
+        <Sscimg data-scroll>
+        <div>
+        <img data-scroll="" data-scroll-speed="-1" src={Linkimg.src} alt="LINK" />
+        </div>
         </Sscimg>
-        <Ssctxt>
+        <Ssctxt data-scroll>
         <Sttl>
         <h2>LINKS</h2>
         <h3>外部リンク</h3>
@@ -44,6 +46,29 @@ const Sinner = styled.div`
 const Sscimg = styled.div`
   width: 65%;
   position:relative;
+  &.is_show {
+    opacity: 1;
+    div {
+      &::before {
+        right: 105%;
+      }
+    }
+  }
+  div {
+    position:relative;
+    overflow: hidden;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background: rgba(228,221,202,1.0);
+      z-index: 1;
+      transition: .9s right;
+    }
+  }
   img {
     width: 100%;
   }
@@ -90,6 +115,11 @@ justify-content: center;
 const Ssctxt = styled.div`
   width: 30%;
   position:relative;
+  opacity: 0;
+  &.is_show {
+    opacity: 1;
+    transition: 1.5s .8s opacity;
+  }
   @media screen and (max-width: 768px) {
     display: flex;
     justify-content: center;

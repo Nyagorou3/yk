@@ -8,7 +8,7 @@ import { Txtbtn } from "../../atoms/btn/Txtbtn";
 export const Companysec4 = ()=> {
   return (
       <Sinner  data-scroll-section>
-        <Ssctxt>
+        <Ssctxt data-scroll>
         <Sttl>
         <h2>INFORMATION</h2>
         <h3>
@@ -96,6 +96,11 @@ justify-content: flex-end;
 const Ssctxt = styled.div`
   width: 100%;
   position:relative;
+  opacity: 0;
+  &.is_show {
+    opacity: 1;
+    transition: 1.5s .8s opacity;
+  }
   @media screen and (max-width: 768px) {
     width: 100%;
   }

@@ -15,8 +15,8 @@ export default function Home({ blog }) {
   // Use Title and Wrapper like any other React component – except they're styled!
   return (
     <DefaltLeyout>
-    <Sinner>
-      <Swrap>
+    <Sinner data-scroll-section>
+      <Swrap data-scroll>
       <h2>
       TODAY&apos;S YK
       </h2>
@@ -125,6 +125,11 @@ const Swrap = styled.div`
   width: 80%;
   margin: 0 auto;
   text-align: left;
+  opacity: 0;
+  &.is_show {
+    opacity: 1;
+    transition: 1.5s .8s opacity;
+  }
   @media screen and (max-width: 768px) {
     width: 90%;
   }

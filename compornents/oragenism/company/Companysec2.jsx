@@ -8,7 +8,7 @@ import { Txtbtn } from "../../atoms/btn/Txtbtn";
 export const Companysec2 = ()=> {
   return (
       <Sinner  data-scroll-section>
-        <Ssctxt>
+        <Ssctxt data-scroll>
         <Sttl>
         <h2>QUALIFICATION</h2>
         <h3>
@@ -63,8 +63,10 @@ export const Companysec2 = ()=> {
           </div>
           </dl>
         </Ssctxt>
-        <Sscimg  data-scroll data-scroll-speed="1">
-        <img src={CSec2.src} alt="QUALIFICATION" />
+        <Sscimg data-scroll>
+        <div>
+        <img data-scroll data-scroll-speed="1" src={CSec2.src} alt="QUALIFICATION" />
+        </div>
         </Sscimg>
       </Sinner>
   );
@@ -105,8 +107,32 @@ const Sscimg = styled.div`
     min-width: 250px;
     margin-right: -6%;
   }
+  &.is_show {
+    opacity: 1;
+    div {
+      &::before {
+        left: 105%;
+      }
+    }
+  }
+  div {
+    position:relative;
+    overflow: hidden;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(228,221,202,1.0);
+      z-index: 1;
+      transition: .9s left;
+    }
+  }
   img {
-    width: 100%;
+    width: 120%;
+    max-width: 120%;
     @media screen and (max-width: 599px) {
       width: 700%;
       max-width: 700%;
@@ -132,6 +158,11 @@ const Ssctxt = styled.div`
   width: 55%;
   padding: 0 0 0 25px;
   position:relative;
+  opacity: 0;
+  &.is_show {
+    opacity: 1;
+    transition: 1.5s .8s opacity;
+  }
   @media screen and (max-width: 768px) {
     width: 65%;
   }

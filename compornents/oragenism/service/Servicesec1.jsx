@@ -7,10 +7,12 @@ import { Txtbtn } from "../../atoms/btn/Txtbtn";
 export const Servicesec1 = ()=> {
   return (
     <Sinner data-scroll-section>
-      <Sscimg>
-      <img src={Sec1main.src} alt="service" />
+      <Sscimg data-scroll>
+      <div>
+      <img data-scroll="" data-scroll-speed="-1" src={Sec1main.src} alt="service" />
+      </div>
       </Sscimg>
-      <Ssctxt>
+      <Ssctxt data-scroll>
       <h2><span>SERVICE</span>Business
       developed
       by YK
@@ -43,11 +45,38 @@ const Sinner = styled.section`
   }
 `
 const Sscimg = styled.div`
-  width: 50%;
+  width: 40%;
   position:relative;
+  img {
+    width: 100%;
+  }
   @media screen and (max-width: 599px) {
     width: 65%;
     margin: 0 auto;
+  }
+  &.is_show {
+    opacity: 1;
+    transform: scale(1) translate(0, 0);
+    div {
+      &::before {
+        left: 105%;
+      }
+    }
+  }
+  div {
+    position:relative;
+    overflow: hidden;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(228,221,202,1.0);
+      z-index: 1;
+      transition: .9s left;
+    }
   }
   &::after  {
     content: '';
@@ -59,6 +88,7 @@ const Sscimg = styled.div`
     width: 100%;
     height: 197px;
     background: url(${Mou.src}) no-repeat;
+    z-index: 2;
     @media screen and (max-width: 768px) {
         background-size: contain;
         left: -65px;
@@ -76,6 +106,11 @@ const Sscimg = styled.div`
 const Ssctxt = styled.div`
   width: 45%;
   position:relative;
+  opacity: 0;
+  &.is_show {
+    opacity: 1;
+    transition: 1.5s .8s opacity;
+  }
   @media screen and (max-width: 599px) {
     width: 100%;
     margin-top: 80px;

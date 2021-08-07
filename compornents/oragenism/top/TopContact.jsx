@@ -5,10 +5,10 @@ import { ATxtbtn } from "../../atoms/btn/ATxtbtn";
 export const TopContact = ()=> {
   return (
       <Sinner data-scroll-section>
-        <Sscimg>
+        <Sscimg data-scroll>
         <img src={Con1.src} alt="CONTACT" />
         </Sscimg>
-        <Ssctxt>
+        <Ssctxt data-scroll>
         <h2>CONTACT</h2>
         <p>
           仕事のご依頼はもちろん、必ずしも依頼につながらないかもしれないが
@@ -45,6 +45,11 @@ const Sinner = styled.section`
 const Sscimg = styled.div`
   width: 50%;
   position:relative;
+  transition: .8s;
+  transform: scale(0);
+  &.is_show {
+    transform: scale(1);
+  }
   @media screen and (max-width: 799px) {
   width: 45%;
   }
@@ -57,6 +62,11 @@ const Sscimg = styled.div`
 const Ssctxt = styled.div`
   width: 45%;
   position:relative;
+  opacity: 0;
+  transition: 1.2s;
+  &.is_show {
+    opacity: 1;
+  }
   @media screen and (max-width: 799px) {
   width: 50%;
   }

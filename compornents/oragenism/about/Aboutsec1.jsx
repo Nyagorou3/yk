@@ -8,10 +8,12 @@ export const Aboutsec1 = ()=> {
   return (
       <Swp  data-scroll-section>
       <Sinner>
-        <Sscimg>
-        <img src={ASec1.src} alt="about YK" />
+        <Sscimg data-scroll>
+        <div>
+        <img data-scroll="" data-scroll-speed="-1" src={ASec1.src} alt="about YK" />
+        </div>
         </Sscimg>
-        <Ssctxt>
+        <Ssctxt data-scroll>
         <Sttl>
         <h2>ABOUT YK</h2>
         <h3>技術を磨き
@@ -22,7 +24,7 @@ export const Aboutsec1 = ()=> {
         </p>
         </Ssctxt>
       </Sinner>
-      <SPro>
+      <SPro data-scroll>
         <h3>PROCESS</h3>
         <Sscroll>
         <SproWp>
@@ -112,6 +114,7 @@ const Sinner = styled.div`
   align-items: center;
   text-align: left;
   color: #000;
+
   @media screen and (max-width: 1279px) {
     width: 90%;
     margin: 200px auto 30px 0;
@@ -127,8 +130,35 @@ const Sinner = styled.div`
 const Sscimg = styled.div`
   width: 65%;
   position:relative;
-  img {
-    width: 100%;
+  &.is_show {
+    opacity: 1;
+    transform: scale(1) translate(0, 0);
+    div {
+      &::before {
+        right: 105%;
+      }
+    }
+  }
+  div {
+    position:relative;
+    overflow: hidden;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background: rgba(228,221,202,1.0);
+      z-index: 1;
+      transition: .9s right;
+    }
+    img {
+      width: 100%;
+      opacity: 1;
+      transform: scale(1.2);
+      display: inline-block;
+    }
   }
   @media screen and (max-width: 768px) {
     width: 95%;
@@ -173,6 +203,11 @@ justify-content: center;
 const Ssctxt = styled.div`
   width: 30%;
   position:relative;
+  opacity: 0;
+  &.is_show {
+    opacity: 1;
+    transition: 1.5s .8s opacity;
+  }
   @media screen and (max-width: 768px) {
     display: flex;
     justify-content: space-between;
@@ -227,6 +262,11 @@ const SPro = styled.div`
   width: 70%;
   margin: 100px auto;
   color: #000;
+  opacity: 0;
+  &.is_show {
+    opacity: 1;
+    transition: 1.5s .8s opacity;
+  }
   @media screen and (max-width: 1279px) {
     margin: 30px auto 60px;
     width: 90%;
