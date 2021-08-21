@@ -8,9 +8,9 @@ import { TxtbtnlW } from "../../atoms/btn/TxtbtnlW";
 
 export const TopRecruit = ()=> {
   return (
-      <Srwap data-scroll-section>
+      <Srwap>
       <Sinner>
-        <Ssctxt data-scroll>
+        <Ssctxt className="mask">
         <div>
         <h2>RECRUIT</h2>
         <h3>型にとらわれない
@@ -23,7 +23,7 @@ export const TopRecruit = ()=> {
         <TxtbtnlW to="/recruit" btntxt="MORE" />
         </div>
         </Ssctxt>
-        <Sscimg data-scroll="" data-scroll-speed="1">
+        <Sscimg className="mask">
         <img src={Sec4main.src} alt="RECRUIT" />
         </Sscimg>
       </Sinner>

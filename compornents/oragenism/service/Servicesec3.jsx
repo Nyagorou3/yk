@@ -13,18 +13,18 @@ import { Txtbtn } from "../../atoms/btn/Txtbtn";
 
 export const Servicesec3 = ()=> {
   return (
-    <Sinner  data-scroll-section>
+    <Sinner>
     <Sul>
     <li id="s1">
-    <div className="img_wp" data-scroll="">
+    <div className="img_wp mask">
     <span className="num">
     01
     </span>
     <div>
-    <img data-scroll="" data-scroll-speed="-1" src={S1.src} alt="建築物各種法定検査" />
+    <img src={S1.src} alt="建築物各種法定検査" />
     </div>
     </div>
-    <div className="txt_wp" data-scroll="">
+    <div className="txt_wp mask">
     <h3>
     <span>Various legal inspections of buildings</span>
     建築物各種法定検査
@@ -126,7 +126,7 @@ export const Servicesec3 = ()=> {
     </div>
     </li>
     <li id="s2">
-    <div className="img_wp" data-scroll="">
+    <div className="img_wp mask">
     <span className="num">
     02
     </span>
@@ -134,7 +134,7 @@ export const Servicesec3 = ()=> {
     <img data-scroll="" data-scroll-speed="-1" src={S2.src} alt="ホームインスペクション" />
     </div>
     </div>
-    <div className="txt_wp" data-scroll="">
+    <div className="txt_wp mask">
     <h3>
     <span>Home inspection</span>
     ホームインスペクション
@@ -155,7 +155,7 @@ export const Servicesec3 = ()=> {
     </div>
     </li>
     <li id="s3">
-    <div className="img_wp" data-scroll="">
+    <div className="img_wp mask">
     <span className="num">
     03
     </span>
@@ -163,7 +163,7 @@ export const Servicesec3 = ()=> {
     <img data-scroll="" data-scroll-speed="-1" src={S3.src} alt="電気工事" />
     </div>
     </div>
-    <div className="txt_wp" data-scroll="">
+    <div className="txt_wp mask">
     <h3>
     <span>Electrical construction</span>
     電気工事
@@ -176,7 +176,7 @@ export const Servicesec3 = ()=> {
     </div>
     </li>
     <li id="s4">
-    <div className="img_wp" data-scroll="">
+    <div className="img_wp mask">
     <span className="num">
     04
     </span>
@@ -184,7 +184,7 @@ export const Servicesec3 = ()=> {
     <img data-scroll="" data-scroll-speed="-1" src={S4.src} alt="環境・公害コンサルタント" />
     </div>
     </div>
-    <div className="txt_wp" data-scroll="">
+    <div className="txt_wp mask">
     <h3>
     <span>Environmental and pollution consultants</span>
     環境・公害コンサルタント
@@ -195,7 +195,7 @@ export const Servicesec3 = ()=> {
     </div>
     </li>
     <li id="s5">
-    <div className="img_wp" data-scroll="">
+    <div className="img_wp mask">
     <span className="num">
     05
     </span>
@@ -203,7 +203,7 @@ export const Servicesec3 = ()=> {
     <img data-scroll="" data-scroll-speed="-1" src={S5.src} alt="給排水設備工事" />
     </div>
     </div>
-    <div className="txt_wp" data-scroll="">
+    <div className="txt_wp mask">
     <h3>
     <span>Water supply and drainage equipment construction</span>
     給排水設備工事
@@ -215,7 +215,7 @@ export const Servicesec3 = ()=> {
     </div>
     </li>
     <li id="s6">
-    <div className="img_wp" data-scroll="">
+    <div className="img_wp mask">
     <span className="num">
     06
     </span>
@@ -223,7 +223,7 @@ export const Servicesec3 = ()=> {
     <img data-scroll="" data-scroll-speed="-1" src={S6.src} alt="WEB制作関連事業" />
     </div>
     </div>
-    <div className="txt_wp" data-scroll="">
+    <div className="txt_wp mask">
     <h3>
     <span>WEB production related business</span>
     WEB制作関連事業

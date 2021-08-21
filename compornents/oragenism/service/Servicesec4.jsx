@@ -6,9 +6,9 @@ import { Txtbtn } from "../../atoms/btn/Txtbtn";
 
 export const Servicesec4 = ()=> {
   return (
-      <Swp  data-scroll-section>
+      <Swp>
 
-      <SPro data-scroll="">
+      <SPro className="mask">
         <h3>FLOW (example)</h3>
         <Sscroll>
         <SproWp>

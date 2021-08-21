@@ -7,9 +7,9 @@ import { Txtbtn } from "../../atoms/btn/Txtbtn";
 
 export const Aboutsec2 = ()=> {
   return (
-      <Swp  data-scroll-section>
+      <Swp>
       <Sinner>
-        <Ssctxt data-scroll>
+        <Ssctxt className="mask">
         <Sttl>
         <h3>人々の安心<br />
         快適に寄り添う</h3>
@@ -18,7 +18,7 @@ export const Aboutsec2 = ()=> {
            その建物を利用する人や近くを通る人まで、全ての人々が便利、安心も含めた快適さを体感できるサービスを提供し続ける。
         </p>
         </Ssctxt>
-        <Sscimg data-scroll="">
+        <Sscimg className="mask">
         <div>
         <img data-scroll="" data-scroll-speed="-1" src={ASec2.src} alt="人々の安心 快適に寄り添う" />
         </div>

@@ -6,13 +6,13 @@ import { Txtbtn } from "../../atoms/btn/Txtbtn";
 
 export const Servicesec1 = ()=> {
   return (
-    <Sinner data-scroll-section>
-      <Sscimg data-scroll>
+    <Sinner>
+      <Sscimg className="mask">
       <div>
-      <img data-scroll="" data-scroll-speed="-1" src={Sec1main.src} alt="service" />
+      <img src={Sec1main.src} alt="service" />
       </div>
       </Sscimg>
-      <Ssctxt data-scroll>
+      <Ssctxt  className="mask">
       <h2><span>SERVICE</span>Business
       developed
       by YK

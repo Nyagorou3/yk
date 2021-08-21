@@ -15,8 +15,8 @@ export default function Home({ blog }) {
   // Use Title and Wrapper like any other React component – except they're styled!
   return (
     <DefaltLeyout>
-    <Sinner data-scroll-section>
-      <Swrap data-scroll>
+    <Sinner>
+      <Swrap className="mask">
       <h2>
       TODAY&apos;S YK
       </h2>

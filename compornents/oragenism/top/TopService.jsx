@@ -15,13 +15,13 @@ import Link from "next/link";
 
 export const TopService = ()=> {
   return (
-      <Sinner data-scroll-section>
+      <Sinner>
         <h2>
         <img className="kazari" src={Seckazari.src} alt="SERVICE" />
         SERVICE
         </h2>
         <Sslist>
-          <li data-scroll>
+          <li className="mask">
             <Link href="/service#s1">
             <a>
             <span className="num">
@@ -37,7 +37,7 @@ export const TopService = ()=> {
             </a>
             </Link>
           </li>
-          <li data-scroll>
+          <li className="mask">
             <Link href="/service#s2">
             <a>
             <span className="num">
@@ -53,7 +53,7 @@ export const TopService = ()=> {
             </a>
             </Link>
           </li>
-          <li data-scroll>
+          <li className="mask">
             <Link href="/service#s3">
             <a>
             <span className="num">
@@ -69,7 +69,7 @@ export const TopService = ()=> {
             </a>
             </Link>
           </li>
-          <li data-scroll>
+          <li className="mask">
             <Link href="/service#s4">
             <a>
             <span className="num">
@@ -85,7 +85,7 @@ export const TopService = ()=> {
             </a>
             </Link>
           </li>
-          <li data-scroll>
+          <li className="mask">
             <Link href="/service#s5">
             <a>
             <span className="num">
@@ -101,7 +101,7 @@ export const TopService = ()=> {
             </a>
             </Link>
           </li>
-          <li data-scroll>
+          <li className="mask">
             <Link href="/service#s6">
             <a>
             <span className="num">
@@ -221,8 +221,8 @@ const Sslist = styled.ul`
   li {
     width: 29%;
     text-align: left;
-    opacity: 0;
-    transition: .8s 1s opacity;
+    /* opacity: 0;
+    transition: .8s 1s opacity; */
     @media screen and (max-width: 768px) {
       width: 30%;
     }
@@ -232,7 +232,9 @@ const Sslist = styled.ul`
     &.is_show {
       opacity: 1;
       .img_wp {
-        transform: scale(1);
+        transform:translate3d(0, 0, 0) skewY(0);
+        opacity: 1;
+        transition: .8s transform,opacity;
         &::before {
           height: 0;
         }
@@ -241,8 +243,9 @@ const Sslist = styled.ul`
     .img_wp {
       position:relative;
       overflow: hidden;
-      transform: scale(.5);
-      transition: .8s 1.5s transform;
+      transform:translate3d(0, 100%, 0) skewY(-12deg);
+      opacity: 0;
+      transition: .8s transform,opacity;
       img {
         width: 130%;
         max-width: 130%;

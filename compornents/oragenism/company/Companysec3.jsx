@@ -11,14 +11,14 @@ import { TxtbtnlW } from "../../atoms/btn/TxtbtnlW";
 
 export const Companysec3 = ()=> {
   return (
-      <Srwap  data-scroll-section>
+      <Srwap >
       <Sinner>
-        <Sscimg data-scroll>
+        <Sscimg className="mask">
         <div>
         <img data-scroll="" data-scroll-speed="-1" src={CSec3.src} alt="GREETING" />
         </div>
         </Sscimg>
-        <Ssctxt data-scroll>
+        <Ssctxt className="mask">
         <div>
         <h2>GREETING</h2>
         <h3>ご挨拶</h3>

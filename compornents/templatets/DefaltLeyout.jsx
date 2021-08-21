@@ -19,14 +19,18 @@ export default function DefaltLeyout({ children }) {
         return;
       }
 
-      const scroll = import("locomotive-scroll").then((LocomotiveScroll) => {
-        new LocomotiveScroll.default({
-          el: scrollRef.current,
-          smooth: true,
-          class: 'is_show',
-          repeat: true
-        });
-      });
+      let fadeInTarget = document.querySelectorAll('.mask');
+        window.addEventListener('scroll', () => {
+      for (let i = 0; i < fadeInTarget.length; i++){
+        const rect = fadeInTarget[i].getBoundingClientRect().top;
+        const scroll = window.pageYOffset || document.documentElement.scrollTop;
+        const offset = rect + scroll;
+        const windowHeight = window.innerHeight; // 現在のブラウザの高さ
+        if (scroll > offset - windowHeight + 150) {
+          fadeInTarget[i].classList.add('is_show');
+        }
+      }
+    });
 
       //マウスストーカー用のdivを取得
       const stalker = document.getElementById('stalker');
@@ -65,7 +69,7 @@ export default function DefaltLeyout({ children }) {
               stalker.classList.remove('hov_');
           });
       }
-      return () => scroll.destroy();
+      return
     }, []);
 
   return (
@@ -113,7 +117,7 @@ const Swrapper = styled.div`
       height: 16px;  //マウスストーカーの直径
       background: rgba(0,0,0,1);
       border-radius: 50%;
-      transition: transform 0.2s, top, 0.2s, left 0.2s, width .5s, height .5s, background-color .5s;
+      transition: transform 0.01s, top, 0.01s, left 0.01s, width .5s, height .5s, background-color .5s;
       transition-timing-function: ease-out;
       z-index: 999;
       &.hov_{

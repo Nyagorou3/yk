@@ -7,8 +7,8 @@ import { Txtbtn } from "../../atoms/btn/Txtbtn";
 
 export const Companysec2 = ()=> {
   return (
-      <Sinner  data-scroll-section>
-        <Ssctxt data-scroll>
+      <Sinner >
+        <Ssctxt className="mask">
         <Sttl>
         <h2>QUALIFICATION</h2>
         <h3>
@@ -63,7 +63,7 @@ export const Companysec2 = ()=> {
           </div>
           </dl>
         </Ssctxt>
-        <Sscimg data-scroll>
+        <Sscimg className="mask">
         <div>
         <img data-scroll data-scroll-speed="1" src={CSec2.src} alt="QUALIFICATION" />
         </div>

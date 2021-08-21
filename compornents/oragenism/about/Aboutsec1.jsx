@@ -6,14 +6,14 @@ import { Txtbtn } from "../../atoms/btn/Txtbtn";
 
 export const Aboutsec1 = ()=> {
   return (
-      <Swp  data-scroll-section>
+      <Swp>
       <Sinner>
-        <Sscimg data-scroll>
+        <Sscimg className="mask">
         <div>
         <img data-scroll="" data-scroll-speed="-1" src={ASec1.src} alt="about YK" />
         </div>
         </Sscimg>
-        <Ssctxt data-scroll>
+        <Ssctxt className="mask">
         <Sttl>
         <h2>ABOUT YK</h2>
         <h3>技術を磨き
@@ -24,7 +24,7 @@ export const Aboutsec1 = ()=> {
         </p>
         </Ssctxt>
       </Sinner>
-      <SPro data-scroll>
+      <SPro className="mask">
         <h3>PROCESS</h3>
         <Sscroll>
         <SproWp>

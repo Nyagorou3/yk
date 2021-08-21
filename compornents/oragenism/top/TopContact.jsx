@@ -4,11 +4,11 @@ import { ATxtbtn } from "../../atoms/btn/ATxtbtn";
 
 export const TopContact = ()=> {
   return (
-      <Sinner data-scroll-section>
-        <Sscimg data-scroll>
+      <Sinner>
+        <Sscimg className="mask">
         <img src={Con1.src} alt="CONTACT" />
         </Sscimg>
-        <Ssctxt data-scroll>
+        <Ssctxt className="mask">
         <h2>CONTACT</h2>
         <p>
           仕事のご依頼はもちろん、必ずしも依頼につながらないかもしれないが

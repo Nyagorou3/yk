@@ -5,13 +5,13 @@ import { Txtbtn } from "../../atoms/btn/Txtbtn";
 
 export const Companysec1 = ()=> {
   return (
-      <Sinner  data-scroll-section>
-        <Sscimg data-scroll>
+      <Sinner >
+        <Sscimg className="mask">
         <div>
         <img data-scroll="" data-scroll-speed="-1" src={ASec1.src} alt="YKの企業情報" />
         </div>
         </Sscimg>
-        <Ssctxt data-scroll>
+        <Ssctxt className="mask">
         <Sttl>
         <h2>COMPANY</h2>
         <h3>心を掴むものを<br /><span className="ptop">”</span>そうぞう <span className="pbottom">“</span>し続ける</h3>
