@@ -389,7 +389,7 @@ const Sul = styled.ul`
       opacity: 0;
       &.is_show {
         opacity: 1;
-        transition: 1.5s 2.5s opacity;
+        transition: 1.5s 1s opacity;
       }
       @media screen and (max-width: 768px) {
         margin-top: 45px;
