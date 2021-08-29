@@ -9,8 +9,12 @@ export const Aboutsec1 = ()=> {
       <Swp>
       <Sinner>
         <Sscimg className="mask">
-        <div>
+        <div className="line">
+        <div className="line2">
+        <div className="linewp">
         <img data-scroll="" data-scroll-speed="-1" src={ASec1.src} alt="about YK" />
+        </div>
+        </div>
         </div>
         </Sscimg>
         <Ssctxt className="mask">
@@ -131,32 +135,69 @@ const Sscimg = styled.div`
   width: 65%;
   position:relative;
   &.is_show {
-    opacity: 1;
-    transform: scale(1) translate(0, 0);
-    div {
+    .linewp {
+    animation: op .8s linear 2s forwards;
+    }
+    .line {
+    &::before {
+      animation: lineAnime .5s linear 0s forwards;/*表示されて0秒後に上線が0.5秒かけて表示*/
+    }
+    &::after {
+      animation: lineAnime .5s linear 1s forwards;/*表示されて1秒後に下線が0.5秒かけて表示*/
+      }
+    }
+    .line2 {
       &::before {
-        right: 105%;
+         animation: lineAnime2 .5s linear .5s forwards;/*表示されて0.5秒後に右線が0.5秒かけて表示*/
+      }
+      &::after {
+        animation: lineAnime2 .5s linear 1.5s forwards;/*表示されて1.5秒後に左線が0.5秒かけて表示*/
       }
     }
   }
-  div {
+  .linewp {
+    opacity: 0;
+  }
+  .line {
     position:relative;
-    overflow: hidden;
-    &::before {
-      content: '';
+    &::before,
+    &::after {
       position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      right: 0;
-      background: rgba(228,221,202,1.0);
-      z-index: 1;
-      transition: .9s right;
+       content:"";
+       width:0;
+       height:1px;
+       background:#333;/* 枠線の色*/
+     }
+     &::before {
+       top:0;
+       left:0;
+     }
+     &::after {
+       bottom:0;
+       right:0;
+     }
     }
+    .line2 {
+      &::before,
+      &::after {
+        position: absolute;
+        content:"";
+        width: 1px;
+        height:0;
+        background:#333;/* 枠線の色*/
+       }
+       &::before {
+         top:0;
+         right:0;
+       }
+       &::after {
+         bottom:0;
+         left:0;
+       }
+      }
     img {
       width: 100%;
       opacity: 1;
-      transform: scale(1.2);
       display: inline-block;
     }
   }
@@ -206,7 +247,7 @@ const Ssctxt = styled.div`
   opacity: 0;
   &.is_show {
     opacity: 1;
-    transition: 1.5s .8s opacity;
+    transition: 1.5s 2s opacity;
   }
   @media screen and (max-width: 768px) {
     display: flex;
@@ -265,7 +306,7 @@ const SPro = styled.div`
   opacity: 0;
   &.is_show {
     opacity: 1;
-    transition: 1.5s .8s opacity;
+    transition: 1.5s 3s opacity;
   }
   @media screen and (max-width: 1279px) {
     margin: 30px auto 60px;

@@ -11,7 +11,7 @@ import { Txtbtn } from "../../atoms/btn/Txtbtn";
 
 export const Servicesec2 = ()=> {
   return (
-      <Swp  data-scroll-section >
+      <Swp>
       <div id="direction">
       <Sscimg>
       <img data-scroll data-scroll-direction="horizontal" data-scroll-speed="10" data-scroll-delay="0.05" src={SSec1.src} alt="service" />

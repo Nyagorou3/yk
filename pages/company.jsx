@@ -4,12 +4,24 @@ import { Companysec2 } from "../compornents/oragenism/company/Companysec2";
 import { Companysec3 } from "../compornents/oragenism/company/Companysec3";
 import { Companysec4 } from "../compornents/oragenism/company/Companysec4";
 import DefaltLeyout  from "../compornents/templatets/DefaltLeyout";
-import Seo from '../compornents/Seo2'
+import Seo from '../compornents/Seo2';
+import Loading from '../compornents/Loading';
+import { ReactElement, useEffect, useState } from 'react';
 
 export default function Company() {
+
+  const [ isShowLoading, setIsShowLoading ] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsShowLoading(false);
+    }, 2000);
+  });
+
   return (
     <DefaltLeyout>
       <Seo title="企業情報 | 株式会社YK企画" description="企業情報 | YK企画は、心を掴むものを想像し続けています。" />
+      <Loading isShow={ isShowLoading }  />
       <Swp>
       <Companysec1 />
       <Companysec2 />

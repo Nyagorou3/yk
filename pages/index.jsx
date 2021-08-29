@@ -34,7 +34,7 @@ export default function Home({ blog }) {
   useEffect(() => {
     setTimeout(() => {
       setIsShowLoading(false);
-    }, 1000);
+    }, 2000);
   });
 
   const settings = {

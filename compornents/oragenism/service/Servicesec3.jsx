@@ -21,7 +21,13 @@ export const Servicesec3 = ()=> {
     01
     </span>
     <div>
+    <div className="line">
+    <div className="line2">
+    <div className="linewp">
     <img src={S1.src} alt="建築物各種法定検査" />
+    </div>
+    </div>
+    </div>
     </div>
     </div>
     <div className="txt_wp mask">
@@ -131,7 +137,13 @@ export const Servicesec3 = ()=> {
     02
     </span>
     <div>
+    <div className="line">
+    <div className="line2">
+    <div className="linewp">
     <img data-scroll="" data-scroll-speed="-1" src={S2.src} alt="ホームインスペクション" />
+    </div>
+    </div>
+    </div>
     </div>
     </div>
     <div className="txt_wp mask">
@@ -159,8 +171,14 @@ export const Servicesec3 = ()=> {
     <span className="num">
     03
     </span>
+    <div className="line">
+    <div className="line2">
+    <div className="linewp">
     <div>
     <img data-scroll="" data-scroll-speed="-1" src={S3.src} alt="電気工事" />
+    </div>
+    </div>
+    </div>
     </div>
     </div>
     <div className="txt_wp mask">
@@ -181,7 +199,13 @@ export const Servicesec3 = ()=> {
     04
     </span>
     <div>
+    <div className="line">
+    <div className="line2">
+    <div className="linewp">
     <img data-scroll="" data-scroll-speed="-1" src={S4.src} alt="環境・公害コンサルタント" />
+    </div>
+    </div>
+    </div>
     </div>
     </div>
     <div className="txt_wp mask">
@@ -200,7 +224,13 @@ export const Servicesec3 = ()=> {
     05
     </span>
     <div>
+    <div className="line">
+    <div className="line2">
+    <div className="linewp">
     <img data-scroll="" data-scroll-speed="-1" src={S5.src} alt="給排水設備工事" />
+    </div>
+    </div>
+    </div>
     </div>
     </div>
     <div className="txt_wp mask">
@@ -220,7 +250,13 @@ export const Servicesec3 = ()=> {
     06
     </span>
     <div>
+    <div className="line">
+    <div className="line2">
+    <div className="linewp">
     <img data-scroll="" data-scroll-speed="-1" src={S6.src} alt="WEB制作関連事業" />
+    </div>
+    </div>
+    </div>
     </div>
     </div>
     <div className="txt_wp mask">
@@ -283,28 +319,68 @@ const Sul = styled.ul`
         font-size: 24px;
       }
       &.is_show {
-        div {
+        .linewp {
+        animation: op .8s linear 2s forwards;
+        }
+        .line {
+        &::before {
+          animation: lineAnime .5s linear 0s forwards;/*表示されて0秒後に上線が0.5秒かけて表示*/
+        }
+        &::after {
+          animation: lineAnime .5s linear 1s forwards;/*表示されて1秒後に下線が0.5秒かけて表示*/
+          }
+        }
+        .line2 {
           &::before {
-            right: 105%;
+             animation: lineAnime2 .5s linear .5s forwards;/*表示されて0.5秒後に右線が0.5秒かけて表示*/
+          }
+          &::after {
+            animation: lineAnime2 .5s linear 1.5s forwards;/*表示されて1.5秒後に左線が0.5秒かけて表示*/
           }
         }
       }
-      div {
-        position: relative;
-        overflow: hidden;
-        &::before {
-          content: '';
+      .linewp {
+        opacity: 0;
+      }
+      .line {
+        position:relative;
+        &::before,
+        &::after {
           position: absolute;
-          width: 100%;
-          height: 100%;
-          top: 0;
-          right: 0;
-          background: rgba(228,221,202,1.0);
-          z-index: 1;
-          transition: .9s right;
+           content:"";
+           width:0;
+           height:1px;
+           background:#333;/* 枠線の色*/
+         }
+         &::before {
+           top:0;
+           left:0;
+         }
+         &::after {
+           bottom:0;
+           right:0;
+         }
         }
+        .line2 {
+          &::before,
+          &::after {
+            position: absolute;
+            content:"";
+            width: 1px;
+            height:0;
+            background:#333;/* 枠線の色*/
+           }
+           &::before {
+             top:0;
+             right:0;
+           }
+           &::after {
+             bottom:0;
+             left:0;
+           }
+          }
         img {
-          width: 120%;
+          width: 100%;
         }
       }
     }
@@ -313,7 +389,7 @@ const Sul = styled.ul`
       opacity: 0;
       &.is_show {
         opacity: 1;
-        transition: 1.5s .8s opacity;
+        transition: 1.5s 2.5s opacity;
       }
       @media screen and (max-width: 768px) {
         margin-top: 45px;

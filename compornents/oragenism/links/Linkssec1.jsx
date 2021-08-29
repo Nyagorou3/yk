@@ -7,8 +7,8 @@ import { Txtbtn } from "../../atoms/btn/Txtbtn";
 
 export const Linkssec1 = ()=> {
   return (
-      <Sinner  data-scroll-section>
-        <Ssctxt data-scroll>
+      <Sinner >
+        <Ssctxt className="mask">
           <dl>
           <div>
             <dt>定期報告関係(特定建築物、建築設備、防火設備)</dt>
@@ -100,7 +100,7 @@ const Ssctxt = styled.div`
   opacity: 0;
   &.is_show {
     opacity: 1;
-    transition: 1.5s .8s opacity;
+    transition: 1.5s 2s opacity;
   }
   h2 {
     writing-mode: vertical-rl;
