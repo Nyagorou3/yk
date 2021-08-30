@@ -106,10 +106,8 @@ const Sscimg = styled.div`
       }
     }
     &::after  {
-      height: 195px;
-      @media screen and (max-width: 799px) {
-        width: 55%;
-      }
+      opacity: 1;
+      transition: .8s 1s;
     }
   }
   &::before  {
@@ -139,12 +137,12 @@ const Sscimg = styled.div`
     right: 0;
     bottom: -110px;
     width: 300px;
-    height: 0;
-    transition: .8s 1s;
+    height: 195px;
+    opacity: 0;
     background: url(${Sec4sub1.src}) no-repeat;
     @media screen and (max-width: 799px) {
       background-size: contain;
-      width: 0;
+      width: 55%;
       right: -70px;
       bottom: -170px;
     }

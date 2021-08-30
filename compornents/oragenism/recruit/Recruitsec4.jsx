@@ -26,7 +26,7 @@ export const Recruitsec4 = ()=> {
         </li>
         <li>
           <img src={RSec4_2.src} alt="NECESSARY" />
-          <h4>アサインしやすい環境</h4>
+          <h4>成長しやすい環境</h4>
           <p>若い会社なので、伸びしろが多く、
              幹部クラスになるのも決して夢ではありません。
           </p>

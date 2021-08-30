@@ -23,9 +23,9 @@ export const Companysec3 = ()=> {
         <h2>GREETING</h2>
         <h3>ご挨拶</h3>
         <p>
-        YK企画では学歴や経歴は関係ありません。<br />
-        自由な発想を持った誠実な人材を募集しています。<br />
-        あなたも新しいことを一緒にYKで始めてみませんか？
+        YK企画はまだまだスタートしたばかりの若い会社です。<br />
+        若い会社だからこそ、目まぐるしく移り変わる技術を柔軟に常に取り入れ
+        お客様と共に寄り添い、より良い提案を続けていきたいと考えております。
         </p>
         </div>
         </Ssctxt>
@@ -79,14 +79,27 @@ const Sscimg = styled.div`
     width: 65%;
     margin: 0 auto 0;
   }
+  &.is_show {
+    &::before  {
+      width: 100%;
+      @media screen and (max-width: 799px) {
+        width: 55%;
+      }
+    }
+    &::after  {
+      opacity: 1;
+      transition: .8s 1s;
+    }
+  }
   &::before  {
     content: '';
     position: absolute;
     left: -170px;
     top: -135px;
-    width: 100%;
+    width: 0;
     height: 282px;
     background: url(${Sec4sub2.src}) no-repeat;
+    transition: .8s;
     z-index: 1;
     @media screen and (max-width: 799px) {
       background-size: contain;
@@ -106,6 +119,7 @@ const Sscimg = styled.div`
     width: 100%;
     height: 194px;
     background: url(${Sec4sub1.src}) no-repeat;
+    opacity: 0;
     @media screen and (max-width: 1279px) {
       right: -245px;
     }
