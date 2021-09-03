@@ -30,7 +30,7 @@ export const Companysec4 = ()=> {
             </dd>
           </div>
           <div>
-            <dt>所在地（宇治営業所）</dt>
+            <dt>所在地（宇治支店）</dt>
             <dd>
               京都府宇治市伊勢田町南遊田6-27
             </dd>
