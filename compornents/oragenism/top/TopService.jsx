@@ -251,7 +251,7 @@ const Sslist = styled.ul`
         max-width: 130%;
         filter: grayscale(100%);
         display: inline-block;
-        transform: scale(1.2);
+        transform: scale(1);
       }
     }
     a {
