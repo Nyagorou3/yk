@@ -17,7 +17,7 @@ export default function Home({ blog }) {
   // Use Title and Wrapper like any other React component – except they're styled!
   return (
     <DefaltLeyout>
-    <Seo title="今日のYKたち | 株式会社YK企画" description="今日のYKたち | YK企画の業務記録や日々を書き連ねています。" />
+    <Seo title="トピックス | 株式会社YK企画" description="トピックス | YK企画の業務記録や日々を書き連ねています。" />
     <Sinner>
       <Swrap className="mask">
       <h2>

@@ -41,7 +41,7 @@ const menuFunction = () => {
         <Snli><Link href="/about" passHref><Slink><span>YKについて</span>ABOUT</Slink></Link></Snli>
         <Snli><Link href="/service" passHref><Slink><span>サービス</span>SERVICE</Slink></Link></Snli>
         <Snli><Link href="/company" passHref><Slink><span>会社概要</span>COMPANY</Slink></Link></Snli>
-        <Snli><Link href="/blog" passHref><Slink><span>今日のYKたち</span>TODAY'S YK</Slink></Link></Snli>
+        <Snli><Link href="/blog" passHref><Slink><span>トピックス</span>TODAY'S YK</Slink></Link></Snli>
         <Snli><Link href="/links" passHref><Slink><span>リンク</span>LINKS</Slink></Link></Snli>
         <Snli><a href="/"><FontAwesomeIcon icon={faInstagram}/></a></Snli>
       </Snul>
